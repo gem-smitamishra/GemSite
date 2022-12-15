@@ -1,0 +1,14 @@
+﻿
+{  "ProjectEnv": "dev",
+	"ProjectName": "GemSite",
+	"Environ": {  
+		"dev": {   
+			"SelectorFile": [ "Selector.json" ],  
+			"TestDataFile": [ "TestData.json" ], 
+			"TestCaseFile": [ ], 
+			"ReportType": "UI Automation",     
+			"OutputPath": ".//"    }   
+}
+}
+
+

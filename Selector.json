@@ -1,0 +1,8 @@
+﻿{
+"navIcon":"<webctrl class='brandLogo' tag='IMG' />",
+"NavList":"<webctrl tag='UL'/>",
+	"ViewOpeningbtn":"<webctrl parentid='__next' tag='A' />",
+	"CareerHeading":"<webctrl tag='P' />"
+
+
+}
