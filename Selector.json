@@ -1,8 +1,10 @@
-﻿{
+﻿{"site":"<html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' />",
 "navIcon":"<webctrl class='brandLogo' tag='IMG' />",
 "NavList":"<webctrl tag='UL'/>",
 	"ViewOpeningbtn":"<webctrl parentid='__next' tag='A' />",
-	"CareerHeading":"<webctrl tag='P' />"
+	"CareerHeading":"<webctrl tag='P' />",
+	"Gridsheading":"<html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /><webctrl aaname='{value}' parentid='__next' />",
+"SolutionGrid":"<webctrl aaname='Solutions we offer' parentid='__next' idx='1' />"
 
 
 }
