@@ -1,0 +1,213 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="HighlyProfessionalGrid" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1146.6666666666667,2856" sap2010:WorkflowViewState.IdRef="HighlyProfessionalGrid_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:gga="clr-namespace:GemEcosystem.GemSURF.Activities;assembly=GemEcosystem.GemSURF.Activities" xmlns:ggm="clr-namespace:GemEcosystem.GemSURF.Models;assembly=GemEcosystem.GemSURF" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="82">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>GemEcosystem.GemSURF.Models</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>System.Dynamic</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Collections.Specialized</x:String>
+      <x:String>GemEcosystem.GemSURF.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>GemEcosystem.GemSURF.Enums</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="106">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>netstandard</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>GemEcosystem.GemSURF</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Collections.Specialized</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>GemEcosystem.GemSURF.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="HighlyProfessionalGrid" sap:VirtualizedContainerService.HintSize="1156.6666666666667,2791.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="ggm:SelectorMap" Name="SelectorMap" />
+      <Variable x:TypeArguments="ggm:TestData" Name="TestData" />
+      <Variable x:TypeArguments="ggm:GlobalConfig" Name="Globlconf" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <gga:InitialiseTest ConfigFile="{x:Null}" ContinueOnError="False" DisplayName="Initialise Test" GlobalConfigs="[Globlconf]" sap:VirtualizedContainerService.HintSize="1094.6666666666667,144.66666666666666" sap2010:WorkflowViewState.IdRef="InitialiseTest_1" SelectorMap="[SelectorMap]" TestCaseName="HighlyProfessional" TestData="[TestData]" />
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Gemini Solutions | IT Consulting, Product Development" sap:VirtualizedContainerService.HintSize="1094.6666666666667,2484.6666666666665" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="afe55f9e-3031-4f64-a54d-1d40caf7febd" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1060.6666666666667,2256.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NMouseScroll KeyModifiers="{x:Null}" Direction="Down" DisplayName="Mouse Scroll" sap:VirtualizedContainerService.HintSize="998.6666666666666,249.33333333333334" sap2010:WorkflowViewState.IdRef="NMouseScroll_3" InteractionMode="HardwareEvents" MovementUnits="10" Version="V3">
+              <uix:NMouseScroll.SearchedElement>
+                <uix:SearchedElement>
+                  <uix:SearchedElement.Target>
+                    <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" FullSelectorArgument="[SelectorMap(&quot;HighlyProfessional&quot;).ToString]" Guid="1691e07b-aeff-46a5-b8ad-72115559dbd1" SearchSteps="Selector" />
+                  </uix:SearchedElement.Target>
+                  <uix:SearchedElement.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:SearchedElement.Timeout>
+                </uix:SearchedElement>
+              </uix:NMouseScroll.SearchedElement>
+            </uix:NMouseScroll>
+            <uix:NClick ClickType="Single" DelayAfter="5" DisplayName="Click 'Learn more'" sap:VirtualizedContainerService.HintSize="998.6666666666666,168" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="afe55f9e-3031-4f64-a54d-1d40caf7febd" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://dev.geminisolutions.com/" DesignTimeRectangle="140, 924, 188, 63" DesignTimeScaleFactor="1.5" ElementType="Text" FriendlyName="'Learn more'" FullSelectorArgument="[SelectorMap(&quot;LearnMorebtn&quot;).ToString]" Guid="0a04fc86-ae69-4bfb-b7a7-c9ef1b489cfa" ImageBase64="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" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /&gt;" SearchSteps="Selector, Image" Version="V1" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="0" />
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NCheckState DisplayName="Check App State" sap:VirtualizedContainerService.HintSize="998.6666666666666,1499.3333333333333" sap2010:WorkflowViewState.IdRef="NCheckState_2" Timeout="[5s]" Version="V3">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="544.6666666666666,1269.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:String" Name="Result" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NGetText DisplayName="Get Text" sap:VirtualizedContainerService.HintSize="482.6666666666667,168" sap2010:WorkflowViewState.IdRef="NGetText_3" TextString="[Result]" Version="V3">
+                    <uix:NGetText.Target>
+                      <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" FullSelectorArgument="[SelectorMap(&quot;CareerHeading&quot;).ToString]" Guid="4b02f766-ca7a-4499-959a-fdb036f75592" SearchSteps="Selector" />
+                    </uix:NGetText.Target>
+                  </uix:NGetText>
+                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="482.6666666666667,95.33333333333333" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[Result]" />
+                  <If Condition="[Result=TestData(0)(0).ToString]" sap:VirtualizedContainerService.HintSize="482.6666666666667,801.3333333333334" sap2010:WorkflowViewState.IdRef="If_2">
+                    <If.Then>
+                      <Sequence sap:VirtualizedContainerService.HintSize="400,316" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <gga:LogStatus ContinueOnError="False" DisplayName="Log Status" GlobalConfigs="[Globlconf]" sap:VirtualizedContainerService.HintSize="338,194" sap2010:WorkflowViewState.IdRef="LogStatus_3" ScreenShot="Yes" TestStep="Learn More button" TestStepDesciption="Button navigated to the right page" TestStepStatus="PASS" />
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence sap:VirtualizedContainerService.HintSize="400,316" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <gga:LogStatus ContinueOnError="False" DisplayName="Log Status" GlobalConfigs="[Globlconf]" sap:VirtualizedContainerService.HintSize="338,194" sap2010:WorkflowViewState.IdRef="LogStatus_4" ScreenShot="Yes" TestStep="Learn More button" TestStepDesciption="Button is not navigated to the right page" TestStepStatus="FAIL" />
+                      </Sequence>
+                    </If.Else>
+                  </If>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="400,116" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" FullSelectorArgument="[SelectorMap(&quot;CareerHeading&quot;).ToString]" Guid="709ff808-e9ca-4e52-b1ea-d40358ecf39e" SearchSteps="Selector" />
+              </uix:NCheckState.Target>
+            </uix:NCheckState>
+            <gga:StopTest ContinueOnError="False" DisplayName="Stop Test" GlobalConfigs="[Globlconf]" sap:VirtualizedContainerService.HintSize="998.6666666666666,95.33333333333333" sap2010:WorkflowViewState.IdRef="StopTest_1" />
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="2dded46d8ebc0d9fcb00f5701e1cd951.jpg" Selector="&lt;html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /&gt;" Url="https://dev.geminisolutions.com/" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

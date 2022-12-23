@@ -1,5 +1,12 @@
 ﻿{
 	"Navigationbar":["About Us","Solutions","GemU","Careers","Contact"],
 	"HomePagecareerGrid":["Search for your dream job"],
-	"GridsHeading":["Careers","Our Culture","Solutions we offer","Technologies","Highly professional team of Developers","Featured Insights","Learn with us at GemU","Clients reviews","Office Locations"]
+	"GridsHeading":["Careers","Our Culture","Solutions we offer","Technologies","Highly professional team of Developers","Featured Insights","Learn with us at GemU","Clients reviews","Office Locations"],
+	"SolutionGrid":["application-development","digital-transformation","managed-services","cloud-solutions","data-engineering","data-science","Infrastructure-services"],
+	"TechnologiesGrid":["Frontend ","Core Development","Databases","Cloud","BI &amp; Analytics","Mobility"],
+"HighlyProfessional":["Search for your dream job"],
+"InsightGrid":["Converting Legacy to Metadata Driven Framework","Recovery And Stabilization Of Business-Critical Applications ","Portfolio Optimization Automation","Creating A Common Data Provider In Excel For All Projects","Pricing Portal Application","Oracle 19c ANA Upgrade Regression Test"],
+"GemUGrid":["Gem University is an in-house university where we intend to provide the best of the opportunities to our employees","A powerful model"],
+"OfficeGrid":["Saint Louis","Gurugram","Hyderabad","Pune","Panchkula","Bengaluru","Noida","St. Austin"]
+	
 }

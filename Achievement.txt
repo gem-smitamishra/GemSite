@@ -1,0 +1,9 @@
+Achievement - 
+Webdriverio
+Sharepoint
+uipath
+Selenium
+Automation gemsite
+
+<html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' />
+<webctrl tag='H4' aaname='Converting Legacy to Metadata Driven Framework' />

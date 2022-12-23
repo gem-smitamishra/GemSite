@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Homepage" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1064,4812.666666666667" sap2010:WorkflowViewState.IdRef="Homepage_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:gga="clr-namespace:GemEcosystem.GemSURF.Activities;assembly=GemEcosystem.GemSURF.Activities" xmlns:ggm="clr-namespace:GemEcosystem.GemSURF.Models;assembly=GemEcosystem.GemSURF" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Homepage" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1064,4830.666666666667" sap2010:WorkflowViewState.IdRef="Homepage_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:gga="clr-namespace:GemEcosystem.GemSURF.Activities;assembly=GemEcosystem.GemSURF.Activities" xmlns:ggm="clr-namespace:GemEcosystem.GemSURF.Models;assembly=GemEcosystem.GemSURF" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="98">
       <x:String>System.Activities</x:String>
@@ -128,7 +128,7 @@
       <x:Boolean x:Key="ShouldExpandAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Homepage" sap:VirtualizedContainerService.HintSize="1074,4748" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Homepage" sap:VirtualizedContainerService.HintSize="1074,4766" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ggm:GlobalConfig" Name="globalconfig" />
       <Variable x:TypeArguments="ggm:SelectorMap" Name="SelectorMap" />
@@ -139,14 +139,14 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <gga:InitialiseTest ConfigFile="{x:Null}" ContinueOnError="False" DisplayName="Initialise Test" GlobalConfigs="[globalconfig]" sap:VirtualizedContainerService.HintSize="1012,144.66666666666666" sap2010:WorkflowViewState.IdRef="InitialiseTest_1" SelectorMap="[SelectorMap]" TestCaseName="Navigationbar" TestData="[TestData]" />
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Gemini Solutions | IT Consulting, Product Development" sap:VirtualizedContainerService.HintSize="1012,4441.333333333333" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="4c85f676-e0f8-4186-80e7-3e8720f0aabf" Version="V2">
+    <gga:InitialiseTest ConfigFile="{x:Null}" ContinueOnError="False" DisplayName="Initialise Test" GlobalConfigs="[globalconfig]" sap:VirtualizedContainerService.HintSize="1012,136" sap2010:WorkflowViewState.IdRef="InitialiseTest_1" SelectorMap="[SelectorMap]" TestCaseName="Navigationbar" TestData="[TestData]" />
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Gemini Solutions | IT Consulting, Product Development" sap:VirtualizedContainerService.HintSize="1012,4479.333333333333" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="4c85f676-e0f8-4186-80e7-3e8720f0aabf" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence sap:VirtualizedContainerService.HintSize="978,4213.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_7">
+          <Sequence sap:VirtualizedContainerService.HintSize="978,4260" sap2010:WorkflowViewState.IdRef="Sequence_7">
             <Sequence.Variables>
               <Variable x:TypeArguments="scg:IEnumerable(ui:UiElement)" Name="data" />
               <Variable x:TypeArguments="x:String" Name="Flag" />
@@ -156,26 +156,26 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence DisplayName="Nav Icon Exists" sap:VirtualizedContainerService.HintSize="916,812" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence DisplayName="Nav Icon Exists" sap:VirtualizedContainerService.HintSize="916,770.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_2">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <uix:NCheckState DisplayName="Check App State 'IMG'" sap:VirtualizedContainerService.HintSize="854,687.3333333333334" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="4c85f676-e0f8-4186-80e7-3e8720f0aabf" Version="V3">
+              <uix:NCheckState DisplayName="Check App State 'IMG'" sap:VirtualizedContainerService.HintSize="854,654.6666666666666" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="4c85f676-e0f8-4186-80e7-3e8720f0aabf" Version="V3">
                 <uix:NCheckState.IfExists>
-                  <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="400,457.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="400,433.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_3">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="338,98.66666666666667" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="Gemini Image is Visible on the Navbar" />
-                    <gga:LogStatus ContinueOnError="False" DisplayName="Log Status" GlobalConfigs="[globalconfig]" sap:VirtualizedContainerService.HintSize="338,194" sap2010:WorkflowViewState.IdRef="LogStatus_1" ScreenShot="Yes" TestStep="Visibility of icon" TestStepDesciption="verifying icon is present or not" TestStepStatus="PASS" />
+                    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="338,92" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="Gemini Image is Visible on the Navbar" />
+                    <gga:LogStatus ContinueOnError="False" DisplayName="Log Status" GlobalConfigs="[globalconfig]" sap:VirtualizedContainerService.HintSize="338,185.33333333333334" sap2010:WorkflowViewState.IdRef="LogStatus_1" ScreenShot="Yes" TestStep="Visibility of icon" TestStepDesciption="verifying icon is present or not" TestStepStatus="PASS" />
                   </Sequence>
                 </uix:NCheckState.IfExists>
                 <uix:NCheckState.IfNotExists>
-                  <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="400,116" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="400,107.33333333333333" sap2010:WorkflowViewState.IdRef="Sequence_4">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -192,7 +192,7 @@
                 </uix:NCheckState.Target>
               </uix:NCheckState>
             </Sequence>
-            <Assign sap:VirtualizedContainerService.HintSize="916,72" sap2010:WorkflowViewState.IdRef="Assign_5">
+            <Assign sap:VirtualizedContainerService.HintSize="916,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_5">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[Flag]</OutArgument>
               </Assign.To>
@@ -200,7 +200,7 @@
                 <InArgument x:TypeArguments="x:String">true</InArgument>
               </Assign.Value>
             </Assign>
-            <ui:FindChildren Children="[data]" DisplayName="Find Children" Filter="&lt;webctrl /&gt;" sap:VirtualizedContainerService.HintSize="916,96" sap2010:WorkflowViewState.IdRef="FindChildren_4" Scope="FIND_CHILDREN">
+            <ui:FindChildren Children="[data]" DisplayName="Find Children" Filter="&lt;webctrl /&gt;" sap:VirtualizedContainerService.HintSize="916,87.33333333333333" sap2010:WorkflowViewState.IdRef="FindChildren_4" Scope="FIND_CHILDREN">
               <ui:FindChildren.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="dd3df1a0-85c9-424d-8dba-09f09b601b27" Selector="[SelectorMap(&quot;NavList&quot;).ToString]">
                   <ui:Target.TimeoutMS>
@@ -212,13 +212,14 @@
                 </ui:Target>
               </ui:FindChildren.Target>
             </ui:FindChildren>
-            <ui:ForEach x:TypeArguments="ui:UiElement" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="916,1734.6666666666667" sap2010:WorkflowViewState.IdRef="ForEach`1_33" Values="[data]">
+            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="916,86.66666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[data.Count]" />
+            <ui:ForEach x:TypeArguments="ui:UiElement" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="916,1700" sap2010:WorkflowViewState.IdRef="ForEach`1_33" Values="[data]">
               <ui:ForEach.Body>
                 <ActivityAction x:TypeArguments="ui:UiElement">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ui:UiElement" Name="Item" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="788,1597.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="788,1571.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_10">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" Name="ItemDataValue" />
                     </Sequence.Variables>
@@ -227,8 +228,8 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <uix:NGetText DisplayName="Get Text" sap:VirtualizedContainerService.HintSize="726,150" sap2010:WorkflowViewState.IdRef="NGetText_5" InUiElement="[Item]" TextString="[ItemDataValue]" Version="V3" />
-                    <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="726,1282.6666666666667" sap2010:WorkflowViewState.IdRef="ForEach`1_45" Values="[TestData(0).ToArray]">
+                    <uix:NGetText DisplayName="Get Text" sap:VirtualizedContainerService.HintSize="726,141.33333333333334" sap2010:WorkflowViewState.IdRef="NGetText_5" InUiElement="[Item]" TextString="[ItemDataValue]" Version="V3" />
+                    <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="726,1274" sap2010:WorkflowViewState.IdRef="ForEach`1_45" Values="[TestData(0).ToArray]">
                       <ui:ForEach.Body>
                         <ActivityAction x:TypeArguments="x:Object">
                           <ActivityAction.Argument>

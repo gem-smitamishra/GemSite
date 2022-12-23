@@ -2,9 +2,29 @@
 "navIcon":"<webctrl class='brandLogo' tag='IMG' />",
 "NavList":"<webctrl tag='UL'/>",
 	"ViewOpeningbtn":"<webctrl parentid='__next' tag='A' />",
-	"CareerHeading":"<webctrl tag='P' />",
+"CareerHeading":"<html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /><webctrl tag='P' />",
+
 	"Gridsheading":"<html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /><webctrl aaname='{value}' parentid='__next' />",
-"SolutionGrid":"<webctrl aaname='Solutions we offer' parentid='__next' idx='1' />"
+	"SolutionGrid":"<html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /><webctrl aaname='Solutions we offer' class='headingEffect' parentid='__next' tag='SPAN' />",
+
+	"SolutionOptions":"<html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /><webctrl href='services/{value}' parentid='__next' tag='A' />",
+	"TechnologiesGrid":"<html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /><webctrl aaname='Technologies' class='headingEffect' parentid='__next' tag='SPAN' />",
+	"TechnologiesOptions":"<html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /><webctrl tag='P' innertext='{value}' />",
+	"TechnologiesHeading":"<html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /><webctrl parentid='__next' tag='SPAN' />",
+	"HighlyProfessional":"<html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /><webctrl tag='H4' aaname='Highly professional team of Developers' />",
+	"LearnMorebtn":"<webctrl aaname='Learn more' parentid='__next' tag='A' />",
+	"Insight":"<html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /><webctrl tag='H2' innertext='Featured Insights' />",
+	"InsightSecs":"<html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /><webctrl aaname='{value}' />",
+	"InsightHeading":"<html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /><webctrl class='HeadingBox_heading__ImzZF' tag='DIV' />",
+	"ViewInsights":"<html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /><webctrl aaname='View all insights' />",
+	"ViewInsightsHeading":"<html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /><webctrl tag='H1' aaname='Our Case Studies' />",
+	"GemUHeading":"<html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /><webctrl tag='H1' innertext='Learn with us at GemU' />",
+	"GemUContent":"<html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /><webctrl class='LearnWithUs_description__zljAm' />",
+	"GemUbtn":"<html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /><webctrl aaname='Explore more' tag='A' />",
+	"ExploreHeading":"<html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /><webctrl parentid='__next' tag='DIV' idx='8' />",
+
+	"Locations":"<html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /><webctrl class='cardHeading' tag='P' />",
+	"LocationsHeading":"<html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /><webctrl aaname='Office Locations' />"
 
 
 }
