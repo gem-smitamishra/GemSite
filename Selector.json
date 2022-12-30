@@ -43,7 +43,9 @@
 	"ClubGrid":"<html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /><webctrl tag='H1' innertext='Clubs At Gemini' />",
 	"Clubs":"<html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /><webctrl aaname='{value}' class='Clubs_clubName__8lsNb' />",
 	"ClubHeading":"<html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /><webctrl tag='P' class='ClubBanner_title___0bYJ' />",
-	"ClubSection":"<html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /><webctrl aaname='{value}' class='ClubContent_stepHeading1__wl51r' />"
+	"ClubSection":"<html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /><webctrl aaname='{value}' class='ClubContent_stepHeading1__wl51r' />",
+		"BenefitsSection":"<html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /><webctrl tag='H1' aaname='Benefits We Offer' />",
+	"benefitsSection":"<html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /><webctrl class='Benefits_benefitHeading__jcvcu' aaname='{value}' />"
 	
 	
 	
