@@ -1,0 +1,1992 @@
+<!--version1.0.7-->
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/luxon@2.4.0/build/global/luxon.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"
+            integrity="sha512-Y2IiVZeaBwXG1wSV7f13plqlmFOx8MdjuHyYFVoYzhyRr3nH/NMDjTBSswijzADdNzMyWNetbLMfOpIPl6Cv9g=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css"
+          integrity="sha512-Velp0ebMKjcd9RiCoaHhLXkR1sFoCCWXNp6w4zj1hfMifYB5441C+sKeBl/T/Ka6NjBiRfBBQRaQq65ekYz3UQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js"
+            integrity="sha512-YibiFIKqwi6sZFfPm5HNHQYemJwFbyyYHjrr3UT+VobMt/YBo1kBxgui5RWc4C3B4RJMYCdCAJkbXHt+irKfSA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<style>
+  .thumb {
+    border: 1px solid #ddd;
+    /* Gray border */
+    border-radius: 4px;
+    /* Rounded border */
+    padding: 5px;
+    /* Some padding */
+    width: 100px;
+    /* Set a small width */
+    min-height: 86px;
+    max-height: 86px;
+  }
+
+  .thumb:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+  }
+
+  body {
+    background: #fafbff;
+    /* transform: scale(0.9);
+      transform-origin: top center; */
+      /* overflow: auto !important; */
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+  }
+
+.tableEx{
+  display: block !important;
+  overflow-x: auto !important;
+}
+
+  #heading {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 48px;
+    /* identical to box height */
+
+    text-align: center;
+    letter-spacing: 0.01em;
+  }
+
+  .nav-pills.gempyp .nav-link.active {
+    background: rgba(33, 98, 132, 1);
+    border-radius: 5px;
+    color: white !important;
+  }
+
+  .nav-pills.gempyp .nav-link {
+    color: rgba(33, 98, 132, 1);
+  }
+
+  .nav-pills.gemsurf .nav-link.active {
+    background: rgba(48, 122, 100);
+    border-radius: 5px;
+    color: white !important;
+  }
+
+  .nav-pills.gemsurf .nav-link {
+    color: rgba(48, 122, 100);
+  }
+
+  .tableHeading {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: 0.01em;
+    font-weight: bold;
+    float: left;
+  }
+
+  .accordHeading {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 27px;
+    letter-spacing: 0.01em;
+    font-weight: bold;
+  }
+
+  .title-card {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    float: left;
+  }
+
+  .text-card {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    float: left;
+  }
+
+  table {
+    font-size: 13px !important;
+  }
+
+  .passTest {
+    color: #2cae21 !important;
+    border-radius: 5px;
+  }
+
+  .failTest {
+    color: #ea3e3e !important;
+    border-radius: 5px;
+  }
+
+  .warnTest {
+    color: #ff6c37 !important;
+    border-radius: 5px;
+  }
+
+  .infoTest {
+    color: #f3bb2a !important;
+    border-radius: 5px;
+  }
+
+  .incompleteTest {
+    color: #f25c5c !important;
+    border-radius: 5px;
+  }
+
+  .othersTest {
+    color: #9e9e9e !important;
+    border-radius: 5px;
+  }
+
+  /* a{
+          color: white !important
+      } */
+  .head {
+    background-color: #375a64;
+    color: white;
+  }
+
+  .statusColorPass {
+    background-color: #2cae21 !important;
+    color: white !important;
+    padding: 5%;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  .statusColorInfo {
+    background-color: #f3bb2a !important;
+    color: white !important;
+    padding: 5%;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  .statusColorFail {
+    background-color: #ea3e3e !important;
+    color: white !important;
+    padding: 5%;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  .statusColorWarn {
+    background-color: #ff6c37 !important;
+    color: white !important;
+    padding: 5%;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  .statusColorIncomplete {
+    background-color: #f25c5c !important;
+    color: white !important;
+    padding: 5%;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  .statusColorOthers {
+    background-color: #9e9e9e !important;
+    color: white !important;
+    padding: 5%;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  .hiddenRow {
+    padding: 0px !important;
+  }
+
+  #myImg {
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  #myImg:hover {
+    opacity: 0.7;
+  }
+
+  /* The Modal (background) */
+  .modal-img {
+    display: none;
+    margin-top: 50%;
+    margin-bottom: 50%;
+    padding-top: 5%;
+    position: fixed;
+    z-index: 1;
+    height: fit-content;
+    background-color: rgb(129, 125, 125);
+    background-color: rgba(129, 125, 125, 0.9);
+
+  }
+
+  .modal {
+    overflow-y: auto;
+  }
+
+  .modal-body {
+    word-wrap: break-word;
+  }
+
+  /* Modal Content (image) */
+  .modal-img-content {
+    /* max-height: 700px;
+height: 100%;
+  display: block;
+  width: 100vw; */
+
+  }
+
+  /* Caption of Modal Image */
+  #caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+  }
+
+  /* Add Animation */
+  .modal-img-content,
+  #caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+
+  @-webkit-keyframes zoom {
+    from {
+      -webkit-transform: scale(0)
+    }
+
+    to {
+      -webkit-transform: scale(1)
+    }
+  }
+
+  @keyframes zoom {
+    from {
+      transform: scale(0)
+    }
+
+    to {
+      transform: scale(1)
+    }
+  }
+
+  /* The Close Button */
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  /* Absolute Center Spinner */
+  .loading {
+    position: fixed;
+    z-index: 999;
+    height: 2em;
+    width: 2em;
+    overflow: show;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+
+  /* Transparent Overlay */
+  .loading:before {
+    content: '';
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fafbff;
+
+    background: #fafbff;
+  }
+
+  /* :not(:required) hides these rules from IE9 and below */
+  .loading:not(:required) {
+    /* hide "loading..." text */
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
+  }
+
+  .loading:not(:required):after {
+    content: '';
+    display: block;
+    font-size: 10px;
+    width: 1em;
+    height: 1em;
+    margin-top: -0.5em;
+    -webkit-animation: spinner 150ms infinite linear;
+    -moz-animation: spinner 150ms infinite linear;
+    -ms-animation: spinner 150ms infinite linear;
+    -o-animation: spinner 150ms infinite linear;
+    animation: spinner 150ms infinite linear;
+    border-radius: 0.5em;
+    -webkit-box-shadow: black 1.5em 0 0 0, black 1.1em 1.1em 0 0, black 0 1.5em 0 0, black -1.1em 1.1em 0 0, black -1.5em 0 0 0, black -1.1em -1.1em 0 0, black 0 -1.5em 0 0, black 1.1em -1.1em 0 0;
+    box-shadow: black 1.5em 0 0 0, black 1.1em 1.1em 0 0, black 0 1.5em 0 0, black -1.1em 1.1em 0 0, black -1.5em 0 0 0, black -1.1em -1.1em 0 0, black 0 -1.5em 0 0, black 1.1em -1.1em 0 0;
+  }
+
+  /* Animation */
+
+  @-webkit-keyframes spinner {
+    0% {
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+
+    100% {
+      -webkit-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+
+  @-moz-keyframes spinner {
+    0% {
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+
+    100% {
+      -webkit-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+
+  @-o-keyframes spinner {
+    0% {
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+
+    100% {
+      -webkit-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes spinner {
+    0% {
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+
+    100% {
+      -webkit-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+
+  .setWidth {
+    word-wrap: break-word;
+    max-width: 80px;
+  }
+
+  .substepIcon {
+    font-size: 20px;
+    color: #215c1e;
+    cursor: pointer;
+  }
+
+  .substepIcon:hover {
+    transform: scale(1.2);
+  }
+
+
+
+  /* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #918b92 #ffffff;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #ffffff;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #918b92;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+  }
+
+  *::-webkit-scrollbar:horizontal {
+    background-color: #918b92;
+    width: 5px !important;
+    border: 3px solid #ffffff;
+  }
+</style>
+
+<body onload="constructPage()">
+<div id="loading" class="loading">Loading&#8230;
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" data-keyboard="false" data-toggle="modal"
+     data-backdrop="static" aria-labelledby="exampleModalLabel" aria-hidden="true" data-scroll="false">
+    <div class="modal-dialog modal-xl vertically-centered" role="document">
+        <div class="modal-content" style="width:80vw !important">
+            <!-- Modal heading -->
+            <div class="mb-5 float-right">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span style="color:black !important" aria-hidden="true">
+              ×
+            </span>
+                </button>
+            </div>
+
+            <!-- Modal body with image -->
+            <div class="modal-body mt-2 text-center mb-2">
+                <img style="width:70vw !important; max-height:450px" class="modal-img-content" id="img01">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- --------------Extra Text Modal---------------- -->
+<div class="modal" id="trimModal" tabindex="-1" role="dialog" data-keyboard="false" data-toggle="modal"
+     data-backdrop="static" aria-labelledby="exampleModalLabel2" aria-hidden="true" data-scroll="false">
+    <div class="modal-dialog modal-xl vertically-centered" role="document">
+        <div class="modal-content" style="width:80vw !important">
+            <!-- Modal heading -->
+            <div class="modal-title mt-3 text-center">
+                <h2 id="trimModaltitle"></h2>
+            </div>
+            <div class="mb-3 float-right">
+                <button type="button" class="close" data-dismiss="modal" onClick="closeModal('trimModal')" aria-label="Close">
+
+            <span style="color:black !important" aria-hidden="true">
+              ×
+            </span>
+                </button>
+            </div>
+
+
+            <!-- Modal body with image -->
+            <div class="modal-body mt-2 text-center mb-2" id="trimModalcontent">
+                <!-- <img style="width:70vw !important; max-height:450px" class="modal-img-content" id="img01"> -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" onClick="closeModal('trimModal')">Close</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- --------------Extra Text Modal---------------- -->
+
+<div class="container-fluid">
+    <!-- <div class="mt-3 text-center">
+          <div id="myModal" class="modal-img">
+       <span onClick="closeImage()" class="close" style="color:black !important">&times;</span>
+        <img class="modal-img-content" id="img01">
+           <div id="caption"></div>
+         </div>
+        <div> -->
+
+
+
+    <h4 class="my-4" id="heading">
+        <b><span id="productType"></span> AUTOMATED TEST EXECUTION REPORT</b>
+    </h4>
+    <div class="ml-5 mt-3">
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <li class="nav-item mr-1" role="presentation">
+                <button class="btn nav-link active" id="pills-overview-tab" data-toggle="pill" data-target="#pills-overview"
+                        type="button" role="tab" aria-controls="pills-home" aria-selected="true" onclick="showFilter('overview')">
+                    Overview
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="btn nav-link" id="pills-testcase-tab" data-toggle="pill" data-target="#pills-testcase"
+                        type="button" role="tab" aria-controls="pills-profile" aria-selected="false"
+                        onclick="showFilter('testcase')">
+                    Testcase Details
+                </button>
+            </li>
+            <li id="filters" class="nav-item ml-auto" style="float: right; display: none">
+                <!-- <button
+                              class="btn"
+                              style="
+                          background: white;
+                          border-radius: 5px !important;
+                          box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.05);
+                        "
+                              onclick="showFilterCards('show')"
+                      >
+                          <i class="fa fa-filter"></i> Filters
+                      </button> -->
+            </li>
+        </ul>
+    </div>
+    <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active overview" id="pills-overview" role="tabpanel"
+             aria-labelledby="pills-overview-tab"></div>
+        <div class="tab-pane fade" id="pills-testcase" role="tabpanel" aria-labelledby="pills-testcase-tab">
+            <div class="mt-3 ml-5 mr-1">
+                <div class="card pt-3 pb-3" id="filtercard" style="
+                    display: none;
+                    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.05);
+                    border-radius: 4px !important;
+                  ">
+                    <div class="d-flex mx-4 mb-3">
+                        <span id="filterHeading" class="tableHeading">Filters</span>
+                        <span class="ml-auto"><i class="fa fa-times" style="cursor: pointer" aria-hidden="true"
+                                                 onclick="showFilterCards('close')"></i>
+              </span>
+                    </div>
+                    <div class="d-flex ml-4">
+                        <div class="">
+                            <input class="form-control search-key" type="text" id="name" placeholder="Search by Tc_name"
+                                   style="width: 270px" />
+                        </div>
+                        <div class="col-sm-2 col-md-2 col-lg-2">
+                            <select class="custom-select search-key" style="width: 270px" id="status"></select>
+                        </div>
+                    </div>
+                    <div class="mx-4 mt-3">
+                        <div class="d-flex">
+                            <!-- <button class="btn" id="applyfilter" onclick="applyfilter()" style="display:block; border-radius:5px !important; color: white !important">Apply Filters</button> -->
+                            <button class="btn ml-2" id="clear" onclick="myFunction()" style="
+                          display: block;
+                          border-radius: 5px !important;
+                          color: white !important;
+                        ">
+                                Clear
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</body>
+<script>
+  theme = {};
+  gempypThemes = {
+    0: "rgba(2, 59, 89)",
+    1: "rgba(33, 98, 132)",
+    2: "rgba(73, 132, 163)",
+  };
+  gemsurfThemes = {
+    0: "rgba(48, 122, 100)",
+    1: "rgba(91, 170, 147)",
+    2: "rgba(143, 210, 190)",
+  };var obj = {"reportProduct":"GEMSURF","Suits_Details":{"report_type":"UI Automation","s_end_time":null,"status":"EXE","project_name":"GemSite","run_type":"UI Automation","user":"Smita.Mishra","env":"dev","machine":"GEMGN-220521","initiated_by":"Smita.Mishra","run_mode":"Microsoft Windows NT 10.0.19045.0","TestCase_Details":[{"tc_run_id":"GridsHeading_44cfa488-ea3e-47b4-b8e0-8fd718eed72b","start_time":1672030893646,"end_time":1672030909140,"name":"GridsHeading","category":"None","status":"PASS","user":"Smita.Mishra","machine":"GEMGN-220521","ignore":false},{"tc_run_id":"HighlyProfessional_1cc760b1-d1b8-4ead-8f38-00c3ab6ab8a4","start_time":1672030992526,"end_time":1672031140455,"name":"HighlyProfessional","category":"None","status":"PASS","user":"Smita.Mishra","machine":"GEMGN-220521","ignore":false},{"tc_run_id":"HomePagecareerGrid_e697f53a-ea83-49f1-bbe1-026d846891e6","start_time":1672031166932,"end_time":1672031171726,"name":"HomePagecareerGrid","category":"None","status":"PASS","user":"Smita.Mishra","machine":"GEMGN-220521","ignore":false},{"tc_run_id":"TechnologiesGrid_230fb72d-057d-4d50-968a-0414718ad75c","start_time":1672031187015,"end_time":1672031334929,"name":"TechnologiesGrid","category":"None","status":"PASS","user":"Smita.Mishra","machine":"GEMGN-220521","ignore":false},{"tc_run_id":"InsightGrid_41153849-a65a-41a9-92c7-e88504d4d7fe","start_time":1672031498436,"end_time":1672031622284,"name":"InsightGrid","category":"None","status":"PASS","user":"Smita.Mishra","machine":"GEMGN-220521","ignore":false},{"tc_run_id":"Navigationbar_04e4625f-7a31-412e-89d3-66f6ca4d28a8","start_time":1672031985286,"end_time":1672032265591,"name":"Navigationbar","category":"None","status":"FAIL","user":"Smita.Mishra","machine":"GEMGN-220521","ignore":false},{"tc_run_id":"OfficeGrid_f46ea9b8-209f-4989-8fe6-a449af6196ee","start_time":1672032315715,"end_time":1672032367211,"name":"OfficeGrid","category":"None","status":"PASS","user":"Smita.Mishra","machine":"GEMGN-220521","ignore":false},{"tc_run_id":"Navigationbar_a2ec41db-afa5-4810-bc3c-e2e56e839352","start_time":1672038128811,"end_time":1672038149228,"name":"Navigationbar","category":"None","status":"FAIL","user":"Smita.Mishra","machine":"GEMGN-220521","ignore":false},{"tc_run_id":"Navigationbar_24c19897-96ce-4d72-b719-f3eb03f86fab","start_time":1672038256163,"end_time":1672038265802,"name":"Navigationbar","category":"None","status":"FAIL","user":"Smita.Mishra","machine":"GEMGN-220521","ignore":false},{"tc_run_id":"Navigationbar_1c1d028d-209b-4450-8429-e6ac73d9966a","start_time":1672039822105,"end_time":1672039829598,"name":"Navigationbar","category":"None","status":"FAIL","user":"Smita.Mishra","machine":"GEMGN-220521","ignore":false},{"tc_run_id":"Navigationbar_1d5a2259-cdbb-4c49-bfc8-6757e3e9f436","start_time":1672040190011,"end_time":1672040198206,"name":"Navigationbar","category":"None","status":"FAIL","user":"Smita.Mishra","machine":"GEMGN-220521","ignore":false},{"tc_run_id":"Navigationbar_0a6aeb77-25e1-494e-9f65-080ed21cf063","start_time":1672040519269,"end_time":1672040526659,"name":"Navigationbar","category":"None","status":"FAIL","user":"Smita.Mishra","machine":"GEMGN-220521","ignore":false},{"tc_run_id":"Navigationbar_76e1ac95-0616-4c10-b54b-90eb5fefb601","start_time":1672040760837,"end_time":1672040768019,"name":"Navigationbar","category":"None","status":"FAIL","user":"Smita.Mishra","machine":"GEMGN-220521","ignore":false},{"tc_run_id":"Navigationbar_daef083e-d67f-4300-a306-4bb1f2ea59b0","start_time":1672042130786,"end_time":1672042493003,"name":"Navigationbar","category":"None","status":"PASS","user":"Smita.Mishra","machine":"GEMGN-220521","ignore":false},{"tc_run_id":"GemUGrid_aa562ded-1378-406a-9715-c5f89aa02354","start_time":1672044445966,"end_time":1672044490813,"name":"GemUGrid","category":"None","status":"PASS","user":"Smita.Mishra","machine":"GEMGN-220521","ignore":false},{"tc_run_id":"GemUGrid_c8d520eb-8148-4fec-b8ec-1ca3c314a8ac","start_time":1672044511600,"end_time":1672044552459,"name":"GemUGrid","category":"None","status":"PASS","user":"Smita.Mishra","machine":"GEMGN-220521","ignore":false},{"tc_run_id":"GemUGrid_4c3e3b84-5336-45e2-bd95-bf81c56ef1c1","start_time":1672044690396,"end_time":1672044732319,"name":"GemUGrid","category":"None","status":"PASS","user":"Smita.Mishra","machine":"GEMGN-220521","ignore":false},{"tc_run_id":"SolutionGrid_4fa84cb3-ff7a-4775-9039-9b1edb5640e8","start_time":1672048223067,"end_time":1672048499857,"name":"SolutionGrid","category":"None","status":"PASS","user":"Smita.Mishra","machine":"GEMGN-220521","ignore":false}],"Testcase_Info":{"FAIL":7,"PASS":11,"TOTAL":18},"s_run_id":"GemSite_d42d9037-db05-473a-8f4b-6fcba7d25922","s_start_time":1672030893643},"TestStep_Details":{"GridsHeading_44cfa488-ea3e-47b4-b8e0-8fd718eed72b":{"steps":[{"Title":"GridHeading","Description":"Verifying all the Grids heading are present or not","status":"PASS","Screenshot":".//Results/26-12-2022/UI Automation/GridsHeading_44cfa488-ea3e-47b4-b8e0-8fd718eed72b/Screenshots/be128d5d-4806-4612-b73b-de6226f47189.png"}],"metaData":[{"TESTCASE NAME":"GridsHeading","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1672030893647,"type":"date"}},{"EXECUTION STARTED ON":{"value":1672030893647,"type":"datetime"},"EXECUTION ENDED ON":{"value":1672030909139,"type":"datetime"},"EXECUTION DURATION":"00h:00m:15s"},{"TOTAL":1,"PASS":1,"FAIL":0,"INFO":0}]},"HighlyProfessional_1cc760b1-d1b8-4ead-8f38-00c3ab6ab8a4":{"steps":[{"Title":"Learn More button","Description":"Button navigated to the right page","status":"PASS","Screenshot":".//Results/26-12-2022/UI Automation/HighlyProfessional_1cc760b1-d1b8-4ead-8f38-00c3ab6ab8a4/Screenshots/6ba68dae-a642-4e58-adf5-886530de5025.png"}],"metaData":[{"TESTCASE NAME":"HighlyProfessional","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1672030992527,"type":"date"}},{"EXECUTION STARTED ON":{"value":1672030992527,"type":"datetime"},"EXECUTION ENDED ON":{"value":1672031140454,"type":"datetime"},"EXECUTION DURATION":"00h:02m:27s"},{"TOTAL":1,"PASS":1,"FAIL":0,"INFO":0}]},"HomePagecareerGrid_e697f53a-ea83-49f1-bbe1-026d846891e6":{"steps":[{"Title":"Click view opening button","Description":"Verifying view opening button clickable or not","status":"PASS","Screenshot":".//Results/26-12-2022/UI Automation/HomePagecareerGrid_e697f53a-ea83-49f1-bbe1-026d846891e6/Screenshots/7ca0cc9b-e667-4434-be85-5755afb2da12.png"}],"metaData":[{"TESTCASE NAME":"HomePagecareerGrid","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1672031166932,"type":"date"}},{"EXECUTION STARTED ON":{"value":1672031166932,"type":"datetime"},"EXECUTION ENDED ON":{"value":1672031171726,"type":"datetime"},"EXECUTION DURATION":"00h:00m:04s"},{"TOTAL":1,"PASS":1,"FAIL":0,"INFO":0}]},"TechnologiesGrid_230fb72d-057d-4d50-968a-0414718ad75c":{"steps":[{"Title":"Technologies Grid Buttons ","Description":"Buttons are navigated to the right page","status":"PASS","Screenshot":".//Results/26-12-2022/UI Automation/TechnologiesGrid_230fb72d-057d-4d50-968a-0414718ad75c/Screenshots/289e4a71-83ca-492b-a542-d6284e49def8.png"}],"metaData":[{"TESTCASE NAME":"TechnologiesGrid","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1672031187015,"type":"date"}},{"EXECUTION STARTED ON":{"value":1672031187015,"type":"datetime"},"EXECUTION ENDED ON":{"value":1672031334928,"type":"datetime"},"EXECUTION DURATION":"00h:02m:27s"},{"TOTAL":1,"PASS":1,"FAIL":0,"INFO":0}]},"InsightGrid_41153849-a65a-41a9-92c7-e88504d4d7fe":{"steps":[{"Title":"Verify Insights Grid","Description":"All the button are navigated to the right page","status":"PASS","Screenshot":".//Results/26-12-2022/UI Automation/InsightGrid_41153849-a65a-41a9-92c7-e88504d4d7fe/Screenshots/ef8519cd-51f0-4a5a-a223-ae54dca63057.png"}],"metaData":[{"TESTCASE NAME":"InsightGrid","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1672031498436,"type":"date"}},{"EXECUTION STARTED ON":{"value":1672031498436,"type":"datetime"},"EXECUTION ENDED ON":{"value":1672031622283,"type":"datetime"},"EXECUTION DURATION":"00h:02m:03s"},{"TOTAL":1,"PASS":1,"FAIL":0,"INFO":0}]},"Navigationbar_04e4625f-7a31-412e-89d3-66f6ca4d28a8":{"steps":[{"Title":"Visibility of icon","Description":"verifying icon is present or not","status":"PASS","Screenshot":".//Results/26-12-2022/UI Automation/Navigationbar_04e4625f-7a31-412e-89d3-66f6ca4d28a8/Screenshots/b2e8d999-2d9a-4f5f-93b8-fa21aef00236.png"},{"Title":"Options in header","Description":"verifying all option present in header or not","status":"FAIL","Screenshot":".//Results/26-12-2022/UI Automation/Navigationbar_04e4625f-7a31-412e-89d3-66f6ca4d28a8/Screenshots/0ca14fd6-323e-4d71-8aa4-14cdbbbe42d4.png"}],"metaData":[{"TESTCASE NAME":"Navigationbar","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1672031985286,"type":"date"}},{"EXECUTION STARTED ON":{"value":1672031985286,"type":"datetime"},"EXECUTION ENDED ON":{"value":1672032265590,"type":"datetime"},"EXECUTION DURATION":"00h:04m:40s"},{"TOTAL":2,"PASS":1,"FAIL":1,"INFO":0}]},"OfficeGrid_f46ea9b8-209f-4989-8fe6-a449af6196ee":{"steps":[{"Title":"Office Locations","Description":"Verify names of locations","status":"PASS","Screenshot":".//Results/26-12-2022/UI Automation/OfficeGrid_f46ea9b8-209f-4989-8fe6-a449af6196ee/Screenshots/290103e9-99af-4934-9187-fef610b604a4.png"}],"metaData":[{"TESTCASE NAME":"OfficeGrid","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1672032315715,"type":"date"}},{"EXECUTION STARTED ON":{"value":1672032315715,"type":"datetime"},"EXECUTION ENDED ON":{"value":1672032367211,"type":"datetime"},"EXECUTION DURATION":"00h:00m:51s"},{"TOTAL":1,"PASS":1,"FAIL":0,"INFO":0}]},"Navigationbar_a2ec41db-afa5-4810-bc3c-e2e56e839352":{"steps":[{"Title":"Visibility of icon","Description":"verifying icon is present or not","status":"PASS","Screenshot":".//Results/26-12-2022/UI Automation/Navigationbar_a2ec41db-afa5-4810-bc3c-e2e56e839352/Screenshots/f5d5ab2f-d18b-4124-a4c7-eba3aa6a189e.png"},{"Title":"Options in header","Description":"verifying all option present in header or not","status":"FAIL","Screenshot":".//Results/26-12-2022/UI Automation/Navigationbar_a2ec41db-afa5-4810-bc3c-e2e56e839352/Screenshots/74a80600-bfca-4f5c-b020-862291f67dce.png"}],"metaData":[{"TESTCASE NAME":"Navigationbar","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1672038128811,"type":"date"}},{"EXECUTION STARTED ON":{"value":1672038128811,"type":"datetime"},"EXECUTION ENDED ON":{"value":1672038149228,"type":"datetime"},"EXECUTION DURATION":"00h:00m:20s"},{"TOTAL":2,"PASS":1,"FAIL":1,"INFO":0}]},"Navigationbar_24c19897-96ce-4d72-b719-f3eb03f86fab":{"steps":[{"Title":"Visibility of icon","Description":"verifying icon is present or not","status":"PASS","Screenshot":".//Results/26-12-2022/UI Automation/Navigationbar_24c19897-96ce-4d72-b719-f3eb03f86fab/Screenshots/107c8469-7cd8-4dcc-a77f-e4824d106d83.png"},{"Title":"Options in header","Description":"verifying all option present in header or not","status":"FAIL","Screenshot":".//Results/26-12-2022/UI Automation/Navigationbar_24c19897-96ce-4d72-b719-f3eb03f86fab/Screenshots/3e9914d0-ea0a-469a-a1ab-9d633f37a3f3.png"}],"metaData":[{"TESTCASE NAME":"Navigationbar","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1672038256163,"type":"date"}},{"EXECUTION STARTED ON":{"value":1672038256163,"type":"datetime"},"EXECUTION ENDED ON":{"value":1672038265802,"type":"datetime"},"EXECUTION DURATION":"00h:00m:09s"},{"TOTAL":2,"PASS":1,"FAIL":1,"INFO":0}]},"Navigationbar_1c1d028d-209b-4450-8429-e6ac73d9966a":{"steps":[{"Title":"Visibility of icon","Description":"verifying icon is present or not","status":"PASS","Screenshot":".//Results/26-12-2022/UI Automation/Navigationbar_1c1d028d-209b-4450-8429-e6ac73d9966a/Screenshots/b07cdbee-b549-48cd-91cf-31632e1ba83e.png"},{"Title":"Options in header","Description":"verifying all option present in header or not","status":"FAIL","Screenshot":".//Results/26-12-2022/UI Automation/Navigationbar_1c1d028d-209b-4450-8429-e6ac73d9966a/Screenshots/2cd5f38b-8233-492a-82bb-9a2efa202ac1.png"}],"metaData":[{"TESTCASE NAME":"Navigationbar","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1672039822105,"type":"date"}},{"EXECUTION STARTED ON":{"value":1672039822105,"type":"datetime"},"EXECUTION ENDED ON":{"value":1672039829597,"type":"datetime"},"EXECUTION DURATION":"00h:00m:07s"},{"TOTAL":2,"PASS":1,"FAIL":1,"INFO":0}]},"Navigationbar_1d5a2259-cdbb-4c49-bfc8-6757e3e9f436":{"steps":[{"Title":"Visibility of icon","Description":"verifying icon is present or not","status":"PASS","Screenshot":".//Results/26-12-2022/UI Automation/Navigationbar_1d5a2259-cdbb-4c49-bfc8-6757e3e9f436/Screenshots/ecf05169-0142-4b83-a676-5d3c79055c64.png"},{"Title":"Options in header","Description":"verifying all option present in header or not","status":"FAIL","Screenshot":".//Results/26-12-2022/UI Automation/Navigationbar_1d5a2259-cdbb-4c49-bfc8-6757e3e9f436/Screenshots/a56888ba-c9dc-420a-83ef-7f99b2004998.png"}],"metaData":[{"TESTCASE NAME":"Navigationbar","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1672040190012,"type":"date"}},{"EXECUTION STARTED ON":{"value":1672040190011,"type":"datetime"},"EXECUTION ENDED ON":{"value":1672040198205,"type":"datetime"},"EXECUTION DURATION":"00h:00m:08s"},{"TOTAL":2,"PASS":1,"FAIL":1,"INFO":0}]},"Navigationbar_0a6aeb77-25e1-494e-9f65-080ed21cf063":{"steps":[{"Title":"Visibility of icon","Description":"verifying icon is present or not","status":"PASS","Screenshot":".//Results/26-12-2022/UI Automation/Navigationbar_0a6aeb77-25e1-494e-9f65-080ed21cf063/Screenshots/c7574611-1880-472f-9064-f7312da7ec46.png"},{"Title":"Options in header","Description":"verifying all option present in header or not","status":"FAIL","Screenshot":".//Results/26-12-2022/UI Automation/Navigationbar_0a6aeb77-25e1-494e-9f65-080ed21cf063/Screenshots/8d9dfa54-95cd-4004-96ca-5e0949f6b893.png"}],"metaData":[{"TESTCASE NAME":"Navigationbar","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1672040519270,"type":"date"}},{"EXECUTION STARTED ON":{"value":1672040519270,"type":"datetime"},"EXECUTION ENDED ON":{"value":1672040526659,"type":"datetime"},"EXECUTION DURATION":"00h:00m:07s"},{"TOTAL":2,"PASS":1,"FAIL":1,"INFO":0}]},"Navigationbar_76e1ac95-0616-4c10-b54b-90eb5fefb601":{"steps":[{"Title":"Visibility of icon","Description":"verifying icon is present or not","status":"PASS","Screenshot":".//Results/26-12-2022/UI Automation/Navigationbar_76e1ac95-0616-4c10-b54b-90eb5fefb601/Screenshots/4ed84f0e-8e63-4f9c-9a30-17394be7f750.png"},{"Title":"Options in header","Description":"verifying all option present in header or not","status":"FAIL","Screenshot":".//Results/26-12-2022/UI Automation/Navigationbar_76e1ac95-0616-4c10-b54b-90eb5fefb601/Screenshots/2e725c9f-5645-46b5-b912-5290c740aa4a.png"}],"metaData":[{"TESTCASE NAME":"Navigationbar","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1672040760837,"type":"date"}},{"EXECUTION STARTED ON":{"value":1672040760837,"type":"datetime"},"EXECUTION ENDED ON":{"value":1672040768019,"type":"datetime"},"EXECUTION DURATION":"00h:00m:07s"},{"TOTAL":2,"PASS":1,"FAIL":1,"INFO":0}]},"Navigationbar_daef083e-d67f-4300-a306-4bb1f2ea59b0":{"steps":[{"Title":"Visibility of icon","Description":"verifying icon is present or not","status":"PASS","Screenshot":".//Results/26-12-2022/UI Automation/Navigationbar_daef083e-d67f-4300-a306-4bb1f2ea59b0/Screenshots/e319c844-9bfa-4f4d-94ce-dd9363a953fd.png"},{"Title":"Options in header","Description":"verifying all option present in header or not","status":"PASS","Screenshot":".//Results/26-12-2022/UI Automation/Navigationbar_daef083e-d67f-4300-a306-4bb1f2ea59b0/Screenshots/fdaf3fc6-cff7-46a3-8bd7-0bb79b714a41.png"}],"metaData":[{"TESTCASE NAME":"Navigationbar","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1672042130787,"type":"date"}},{"EXECUTION STARTED ON":{"value":1672042130787,"type":"datetime"},"EXECUTION ENDED ON":{"value":1672042493002,"type":"datetime"},"EXECUTION DURATION":"00h:06m:02s"},{"TOTAL":2,"PASS":2,"FAIL":0,"INFO":0}]},"GemUGrid_aa562ded-1378-406a-9715-c5f89aa02354":{"steps":[{"Title":"GemUGrid","Description":"Verifying content and navigation of button","status":"PASS","Screenshot":".//Results/26-12-2022/UI Automation/GemUGrid_aa562ded-1378-406a-9715-c5f89aa02354/Screenshots/90e103a1-8aba-4445-8c45-8c5472e26416.png"}],"metaData":[{"TESTCASE NAME":"GemUGrid","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1672044445967,"type":"date"}},{"EXECUTION STARTED ON":{"value":1672044445967,"type":"datetime"},"EXECUTION ENDED ON":{"value":1672044490812,"type":"datetime"},"EXECUTION DURATION":"00h:00m:44s"},{"TOTAL":1,"PASS":1,"FAIL":0,"INFO":0}]},"GemUGrid_c8d520eb-8148-4fec-b8ec-1ca3c314a8ac":{"steps":[{"Title":"GemUGrid","Description":"Verifying content and navigation of button","status":"PASS","Screenshot":".//Results/26-12-2022/UI Automation/GemUGrid_c8d520eb-8148-4fec-b8ec-1ca3c314a8ac/Screenshots/01d64cbc-70e9-4a8c-b49e-13be4cedb4a5.png"}],"metaData":[{"TESTCASE NAME":"GemUGrid","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1672044511600,"type":"date"}},{"EXECUTION STARTED ON":{"value":1672044511600,"type":"datetime"},"EXECUTION ENDED ON":{"value":1672044552458,"type":"datetime"},"EXECUTION DURATION":"00h:00m:40s"},{"TOTAL":1,"PASS":1,"FAIL":0,"INFO":0}]},"GemUGrid_4c3e3b84-5336-45e2-bd95-bf81c56ef1c1":{"steps":[{"Title":"GemUGrid","Description":"Verifying content and navigation of button","status":"PASS","Screenshot":".//Results/26-12-2022/UI Automation/GemUGrid_4c3e3b84-5336-45e2-bd95-bf81c56ef1c1/Screenshots/df5ca158-f63f-4ae5-a9b1-ba5a73c5c307.png"}],"metaData":[{"TESTCASE NAME":"GemUGrid","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1672044690397,"type":"date"}},{"EXECUTION STARTED ON":{"value":1672044690396,"type":"datetime"},"EXECUTION ENDED ON":{"value":1672044732318,"type":"datetime"},"EXECUTION DURATION":"00h:00m:41s"},{"TOTAL":1,"PASS":1,"FAIL":0,"INFO":0}]},"SolutionGrid_4fa84cb3-ff7a-4775-9039-9b1edb5640e8":{"steps":[],"metaData":[{"TESTCASE NAME":"SolutionGrid","SERVICE PROJECT":"None","DATE OF EXECUTION":{"value":1672048223067,"type":"date"}},{"EXECUTION STARTED ON":{"value":1672048223067,"type":"datetime"},"EXECUTION ENDED ON":{"value":1672048499857,"type":"datetime"},"EXECUTION DURATION":"00h:04m:36s"},{"TOTAL":0,"PASS":0,"FAIL":0,"INFO":0}]}}};console.log(obj);
+  if (obj.reportProduct === "GEMPYP") {
+    theme = gempypThemes;
+  } else if (obj.reportProduct === "GEMSURF") {
+    theme = gemsurfThemes;
+  } else {
+  }
+  obj.Suits_Details.TestCase_Details = changeFormat(
+    obj.Suits_Details.TestCase_Details
+  );
+  var excludeHeader = [
+    "TC_RUN_ID",
+    "STEPS",
+    "EXECUTION_METADATA",
+    "RESULT_FILE",
+    "IGNORE",
+  ];
+  var sortType = "";
+  var lastsortHeader = "";
+  var exeHeaders = {
+    STATUS: "status",
+    "PROJECT NAME": "project_name",
+    "REPORT TYPE": "report_type",
+    ENV: "env",
+    "START TIME": "s_start_time",
+    "END TIME": "s_end_time",
+    DURATION: "duration",
+  };
+  var infraHeaders = {
+    "EXECUTED BY": "user",
+    "EXECUTED ON": "machine",
+    RUN_TYPE: "run_type",
+    RUN_MODE: "run_mode",
+  };
+  var options = getOptions(obj.Suits_Details.TestCase_Details);
+  for (var i = 0; i < options.length; i++) {
+    var opt = options[i];
+    var el = document.createElement("option");
+    el.textContent = opt;
+    el.value = opt;
+    $("#status").append(el);
+  }
+
+  function changeFormat(value) {
+
+    for (var j in value) {
+      var keys = Object.keys(value[j]);
+      var key, newkey, i = 0, n = keys.length;
+      var newobj = {}
+      while (i < n) {
+        key = keys[i];
+        if (key.includes('_time')) {
+          newobj[key.replace('_', " ").toUpperCase()] = value[j][key];
+        }
+        else
+        {
+          newobj[key.toUpperCase()] = value[j][key];
+        }
+        i++;
+      }
+      value[j] = newobj;
+    }
+
+    for (var i = 0; i < value.length; i++) {
+      var keys = Object.keys(value[i]);
+      for (var j = 0; j < keys.length; j++) {
+        if (typeof value[i][keys[j]] != "object") {
+          value[i][keys[j]] = {
+            value: value[i][keys[j]],
+            sortValue: value[i][keys[j]],
+          };
+        }
+      }
+    }
+    return value;
+  }
+  function constructPage() {
+
+    var infraTable = getInfraDetailsTable(obj.Suits_Details);
+    $("#pills-overview").append(infraTable);
+    var cardDetailsOverview = getCardDetails(obj.Suits_Details.Testcase_Info, 'overview');
+    var cardDetailsTestcase = getCardDetails(obj.Suits_Details.Testcase_Info, 'testcase');
+
+    $("#pills-overview").append(cardDetailsOverview);
+    $("#pills-testcase").append(cardDetailsTestcase);
+    var exeTable = getExecutionDetailsTable(obj.Suits_Details);
+    $("#pills-overview").append(exeTable);
+
+    document.getElementById("productType").innerText = obj.reportProduct;
+    $("#heading").css("color", theme[0]);
+    $("#filterHeading").css("color", theme[0]);
+    $("#filtercard").hover(
+      function () {
+        var col = "1px solid " + theme[0];
+        $(this).css("border", col);
+      },
+      function () {
+        $(this).css("border", "none");
+      }
+    );
+    $("#clear").css("background-color", theme[2]);
+    if (obj.reportProduct === "GEMPYP") {
+      $(".nav-pills").addClass("gempyp");
+    } else if (obj.reportProduct === "GEMSURF") {
+      $(".nav-pills").addClass("gemsurf");
+    } else {
+    }
+
+    var testcaseDetailsTable = getTestcaseDetailsTable(
+      obj.Suits_Details.TestCase_Details
+    );
+    $("#pills-testcase").append(testcaseDetailsTable);
+
+    $('#loading').hide();
+
+  }
+
+  function getTestcaseDetailsTable(list) {
+    var div = $("<div/>").addClass("mt-5 mx-4 container-fluid tableEx");
+    var cols = [];
+
+    for (var i = 0; i < list.length; i++) {
+      for (var k in list[i]) {
+        if (cols.indexOf(k) === -1) {
+          // Push all keys to the array
+          if (!excludeHeader.includes(k)) {
+            cols.push(k.toUpperCase());
+          }
+        }
+      }
+    }
+
+    if (!cols.includes("DURATION")) {
+      cols.push("DURATION");
+    }
+    if (!cols.includes("S.No.")) {
+      cols.unshift("S.NO.");
+    }
+    // Create a table element
+    var table = document.createElement("table");
+    table.id = "tab";
+    table.className =
+      "table table-borderless table-responsive d-block d-md-table";
+    table.style.boxShadow = "0px 4px 8px rgba(0, 71, 136, 0.11)";
+    table.style.borderRadius = "4px";
+    // Create table row tr element of a table
+    var tr = table.insertRow(-1);
+    for (var i = 0; i < cols.length; i++) {
+      // Create the table header th element
+      var theader = document.createElement("th");
+      theader.style.backgroundColor =
+        theme[2].substring(0, theme[2].length - 1) + ", 0.1)";
+      theader.innerHTML = cols[i];
+      if((cols[i].includes('START TIME')) || (cols[i].includes('END TIME')))
+      {
+        theader.style.minWidth = "120px";
+      }
+      if(cols[i].includes('TIME'))
+      {
+        const col_id = cols[i].split(' ')
+        theader.id = col_id[0] + '_' + col_id[1] + "_tc";
+      }
+      else
+      {
+      theader.id = cols[i] + "_tc";
+      }
+
+      theader.addEventListener("click", getsort, true);
+      // Append columnName to the table row
+      tr.appendChild(theader);
+    }
+
+    // Adding the data to the table
+    for (var i = 0; i < list.length; i++) {
+      // Create a new row
+      if (list[i]["IGNORE"] !== true) {
+        trow = table.insertRow(-1);
+        trow.setAttribute("data-toggle", "collapse");
+        trow.setAttribute("data-target", "#accord" + i);
+        trow.className = "checkCollapse";
+        trow.style.background = "white";
+        for (var j = 0; j < cols.length; j++) {
+          var cell = trow.insertCell(-1);
+          cell.addEventListener("click", function () {
+            $("#tab").find("tbody").find("tr").not(".accordRow").not(".checkCollapse").not(":first").fadeIn("fast");
+          });
+
+          var att = document.createAttribute("data-input");
+
+          if (cols[j].includes("_")) {
+            var v = cols[j].replace("_", " ");
+            att.value = v;
+          } else {
+            att.value = cols[j];
+          }
+          cell.setAttributeNode(att);
+          if (cols[j] === "STATUS") {
+            // cell.innerHTML = list[i][cols[j]];
+            var link = document.createElement("div");
+            link.className = "btn-sm";
+            cell.setAttribute("class", "status");
+            link.innerHTML = list[i][cols[j]]["value"];
+            cell.appendChild(link);
+            if (list[i][cols[j]]["value"] === "PASS") {
+              link.className = "statusColorPass";
+            } else if (list[i][cols[j]]["value"] === "FAIL") {
+              link.className = "statusColorFail";
+            } else if (list[i][cols[j]]["value"] === "INFO") {
+              link.className = "statusColorInfo";
+            } else if (list[i][cols[j]]["value"] === "WARN") {
+              link.className = "statusColorWarn";
+            } else if (list[i][cols[j]]["value"] === "INCOMPLETE") {
+              link.className = "statusColorIncomplete";
+            } else {
+              link.className = "statusColorOthers";
+            }
+            // link.style.width='fit-content';
+          } else if ((cols[j].includes("START TIME")) || (cols[j].includes("END TIME"))) {
+            cell.innerHTML = changeTime(list[i][cols[j]]["value"]);
+          } else if (cols[j].includes("S.NO.")) {
+            cell.innerHTML = changeSerial(i)["value"];
+            // cell.style.maxWidth ="20px !important";
+          } else if (cols[j].includes("DURATION")) {
+            cell.innerHTML = getDuration(
+              list[i]["START TIME"]["value"],
+              list[i]["END TIME"]["value"],
+              i
+            )["value"];
+          }
+          else if (cols[j].includes("LOG_FILE")) {
+            if (!list[i][cols[j]]) {
+              cell.innerHTML = "None";
+            }
+            else {
+              var link = document.createElement("a");
+              if(list[i][cols[j]]["value"])
+              {
+                link.href = list[i][cols[j]]["value"];
+              }
+              else {
+                link.href = list[i][cols[j].toLowerCase()]["value"];
+              }
+              // link.href = list[i][cols[j].toLowerCase()]["value"];
+              // link.href = list[i][cols[j]]["value"];
+              link.target = "_blank";
+              link.innerHTML = "View";
+              link.addEventListener("click", function (e) {
+                e.stopImmediatePropagation();
+              });
+              cell.appendChild(link);
+            }
+          }
+          else if (cols[j].toUpperCase().includes("NAME")) {
+            cell.setAttribute("class", "testfilt");
+            cell.innerHTML = list[i][cols[j]]["value"];
+          }
+          else {
+            if (!list[i][cols[j]]) {
+              cell.innerHTML = "None";
+            } else {
+              cell.innerHTML = list[i][cols[j]]["value"];
+            }
+          }
+        }
+      }
+      trowAccor = table.insertRow(-1);
+      tcellAccord = trowAccor.insertCell(-1);
+      tcellAccord.className = "hiddenRow";
+      tcellAccord.setAttribute("colspan", cols.length);
+
+
+
+
+      var accordDiv = document.createElement("div");
+      accordDiv.className = "accordion-body collapse";
+      accordDiv.id = "accord" + i;
+      accordDiv.setAttribute("data-parent", "#tab");
+      var accordHeading = $("<div/>")
+        .html("Test Step Report")
+        .addClass("mb-2 accordHeading mt-4 text-center")
+        .css("color", theme[0]);
+      accordDiv.append(accordHeading[0]);
+      var stepCard = createAccordionCards(
+        obj.TestStep_Details[list[i]["TC_RUN_ID"]["value"]].metaData[2],
+        i
+      );
+      stepCard.addClass("mt-4");
+      accordDiv.append(stepCard[0]);
+      var stepDetails = createAccordionMetaDetails(
+        obj.TestStep_Details[list[i]["TC_RUN_ID"]["value"]].metaData
+      );
+      accordDiv.append(stepDetails[0]);
+      var tableAccord = createAccordionTable(
+        obj.TestStep_Details[list[i]["TC_RUN_ID"]["value"]].steps,
+        i
+      );
+      accordDiv.append(tableAccord[0]);
+      // tcellAccord.append(imgmodaldiv);
+      tcellAccord.append(accordDiv);
+    }
+
+    div.append(table);
+    return div;
+  }
+  function createAccordionTable(list, index) {
+    var div = $("<div/>").addClass("mt-5 mx-5 mb-2");
+
+    var cols = [];
+    for (var i = 0; i < list.length; i++) {
+      for (var k in list[i]) {
+        if (cols.indexOf(k) === -1) {
+          // Push all keys to the array
+          if (!excludeHeader.includes(k)) {
+            cols.push(k);
+          }
+        }
+      }
+    }
+    if (!cols.includes("S.No.")) {
+      cols.unshift("S.NO.");
+    }
+
+    var table = document.createElement("table");
+    table.id = "tabAccord" + index;
+    table.className =
+      "table table-borderless table-responsive d-block d-md-table w-100";
+    //  table.style.width="100%";
+    table.style.boxShadow = "0px 4px 8px rgba(0, 71, 136, 0.11)";
+    table.style.borderRadius = "4px";
+    // Create table row tr element of a table
+    var tr = table.insertRow(-1);
+
+    for (var i = 0; i < cols.length; i++) {
+      // Create the table header th element
+      var theader = document.createElement("th");
+      theader.style.backgroundColor =
+        theme[2].substring(0, theme[2].length - 1) + ", 0.1)";
+      theader.innerHTML = cols[i].toUpperCase();
+      theader.id = cols[i] + "_tcaccord";
+      if (cols[i] === "STATUS" || cols[i] === "status") {
+        theader.style.width = "130px";
+      }
+      // Append columnName to the table row
+      tr.appendChild(theader);
+    }
+    for (var i = 0; i < list.length; i++) {
+      // Create a new row
+      trow = table.insertRow(-1);
+      trow.className = "accordRow";
+      trow.style.backgroundColor = "#FFFFFF";
+      for (var j = 0; j < cols.length; j++) {
+        var cell = trow.insertCell(-1);
+        cell.setAttribute("class", "align-middle setWidth");
+
+        var att = document.createAttribute("data-input");
+
+        if (cols[j].includes(" ")) {
+          var v = cols[j].replace(" ", "_");
+          att.value = v;
+        } else {
+          att.value = cols[j];
+        }
+        cell.setAttributeNode(att);
+        if (cols[j].toLowerCase() === "substeps") {
+          cell.style.width = "20px";
+          cell.style.verticalAlign = "middle";
+          cell.setAttribute("class", "text-center");
+          if (list[i][cols[j]]) {
+            var divIcon = document.createElement("div");
+            var icon = document.createElement("i");
+            icon.id = i;
+            icon.setAttribute("title", "View Substeps");
+            icon.setAttribute("class", "fa fa-eye substepIcon");
+            var index = i;
+            console.log(list[index]);
+            console.log(cols[j]);
+            divIcon.addEventListener("click", (event) => {
+              console.log(list);
+              createSubsteps(list, event);
+
+              trimModal.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+            });
+            divIcon.appendChild(icon);
+            cell.appendChild(divIcon);
+
+          }
+          else {
+            cell.innerHTML = "-";
+
+          }
+        }
+        else if (cols[j] && cols[j].toLowerCase() === 'screenshot') {
+          if (list[i][cols[j]] !== "N/A") {
+            var image = document.createElement("img");
+			var temp=list[i][cols[j]].split("/");
+			var relativePath=temp[temp.length-3]+"/"+temp[temp.length-2]+"/"+temp[temp.length-1];
+            image.setAttribute('src', relativePath);
+            image.setAttribute('class', "thumb");
+            image.setAttribute('image', "Screenshot");
+            image.addEventListener("click", function () {
+              var modal = document.getElementById("myModal");
+
+              // Get the image and insert it inside the modal - use its "alt" text as a caption
+              var img = document.getElementById("myImg");
+              var modalImg = document.getElementById("img01");
+              var captionText = document.getElementById("caption");
+              modal.style.display = "block";
+              modalImg.src = this.src;
+              captionText.innerHTML = this.alt;
+            });
+
+            image.setAttribute('data-toggle', 'modal');
+            image.setAttribute('data-target', '#myModal');
+            // modal.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+            image.setAttribute('id', "myImg");
+            cell.appendChild(image);
+
+          } else {
+            var divHandle = document.createElement("div");
+			divHandle.innerHTML="N/A";
+            // divHandle.setAttribute('class','text-center');
+            // divHandle.innerHTML="(blank)";
+            cell.appendChild(divHandle);
+          }
+        }
+        else if (list[i][cols[j]] && typeof list[i][cols[j]] === "object") {
+          var a = document.createElement("a");
+          a.href = list[i][cols[j]]["href"];
+          a.target = "_blank";
+          a.innerHTML = list[i][cols[j]]["LinkName"];
+          cell.appendChild(a);
+        } else if (cols[j] === "STATUS" || cols[j] === "status") {
+          var cont = document.createElement("div");
+
+          if (list[i][cols[j]] === "PASS") {
+            cont.className = "statusColorPass statusAccord ";
+          } else if (list[i][cols[j]] === "FAIL") {
+            cont.className = "statusColorFail statusAccord";
+          } else if (list[i][cols[j]] === "INFO") {
+            cont.className = "statusColorInfo statusAccord";
+          } else if (list[i][cols[j]] === "WARN") {
+            cont.className = "statusColorWarn statusAccord";
+          } else if (list[i][cols[j]] === "INCOMPLETE") {
+            cont.className = "statusColorIncomplete statusAccord";
+          } else {
+            cont.className = "statusColorOthers statusAccord";
+          }
+          cont.innerText = list[i][cols[j]];
+          cell.appendChild(cont);
+        } else if (cols[j] === "TIME" || cols[j] === "time") {
+          cell.innerHTML = convertIntoDateTime(list[i][cols[j]]);
+        } else if (cols[j] === "S.NO.") {
+          cell.innerHTML = i + 1;
+          cell.style.width = "20px";
+
+        } else {
+          if (list[i][cols[j]] === undefined) {
+            list[i][cols[j]] = "-";
+          }
+          cell.append(getTrimData(list[i][cols[j]], cols[j]));
+        }
+      }
+    }
+    div.append(table);
+    return div;
+  }
+
+  function getExecutionDetailsTable(data) {
+    var div = $("<div/>").addClass(" mx-5 mt-5");
+    var exeHeading = $("<span/>")
+      .html("Execution Details")
+      .addClass("tableHeading mb-2")
+      .css("color", theme[0]);
+    $(div).append(exeHeading);
+    var table = $("<table/>")
+      .addClass(
+        "table table-borderless table-responsive w-100 d-block d-md-table"
+      )
+      .css("box-shadow", " 0px 3px 6px rgba(0, 71, 136, 0.05)")
+      .css("border-radius", "4px");
+    var cols = Headers(exeHeaders);
+    var headers = $("<tr>");
+    var content = $("<tr/>");
+    for (var colIndex = 0; colIndex < cols.length; colIndex++) {
+      var val = data[cols[colIndex]];
+      var backOpacity = theme[2].substring(0, theme[2].length - 1) + ", 0.1)";
+      headers
+        .append($("<th/>").html(cols[colIndex]))
+        .css("color", "black")
+        .css("background-color", backOpacity);
+
+      $(table).append(headers);
+    }
+    for (var colIndex = 0; colIndex < cols.length; colIndex++) {
+      var val = data[exeHeaders[cols[colIndex]]];
+
+      if (cols[colIndex].toUpperCase().includes("STATUS")) {
+        val = document.createElement("div");
+        val.innerText = data[exeHeaders[cols[colIndex]]];
+        if (data[exeHeaders[cols[colIndex]]] === "PASS") {
+          val.className = "statusColorPass";
+        } else if (data[exeHeaders[cols[colIndex]]] === "FAIL") {
+          val.className = "statusColorFail";
+        } else if (data[exeHeaders[cols[colIndex]]] === "INFO") {
+          val.className = "statusColorInfo";
+        } else if (data[exeHeaders[cols[colIndex]]] === "WARN") {
+          val.className = "statusColorWarn";
+        } else if (data[exeHeaders[cols[colIndex]]] === "INCOMPLETE") {
+          val.className = "statusColorIncomplete";
+        } else {
+          val.className = "statusColorOthers";
+        }
+      }
+      else if((cols[colIndex].toUpperCase().includes("START TIME"))){
+        val = changeTime(data[exeHeaders[cols[colIndex]]]);
+      }
+
+      else if ((cols[colIndex].toUpperCase().includes("END TIME"))) {
+        if(data[exeHeaders[cols[0]]] === "EXE"){
+        val = "-------------";
+        }
+        else{
+          val=changeTime(data[exeHeaders[cols[colIndex]]]);
+        }
+      }
+
+      else if (cols[colIndex].toUpperCase().includes("DURATION")) {
+        if(data[exeHeaders[cols[0]]] === "EXE"){
+        val = "-------------";
+        }
+        else{
+        val = getDuration(
+          data[exeHeaders["START TIME"]],
+          data[exeHeaders["END TIME"]],
+          colIndex + "_col"
+        )["value"];
+        }
+      }
+      else if (val === undefined) {
+        val = "None";
+      }
+
+
+
+
+      content.append($("<td/>").html(val).css("background-color", "white"));
+
+      $(table).append(content);
+    }
+
+    div.append(table);
+    return div;
+  }
+
+  function createAccordionMetaDetails(data) {
+    var div = $("<div/>")
+      .addClass("mt-4 mx-5 card p-3")
+      .css("box-shadow", "0px 3px 6px rgba(0, 0, 0, 0.05)")
+      .css("border-radius", "6px")
+      .css("display", "block")
+      .hover(
+        function () {
+          var col = "1px solid " + theme[0];
+          $(this).css("border", col).css("cursor", "pointer");
+        },
+        function () {
+          $(this).css("border", "none");
+        }
+      );
+    var table = $("<table/>").addClass(
+      "table table-borderless table-responsive w-100 d-block d-md-table"
+    );
+    for (var m = 0; m < data.length - 1; m++) {
+      var headers = $("<tr>");
+      headers.addClass("accordRow");
+      var content = $("<tr/>");
+      content.addClass("accordRow");
+      var cols = Headers(data[m]);
+      for (var colIndex = 0; colIndex < cols.length; colIndex++) {
+        var val = data[m][cols[colIndex]];
+
+        headers
+          .append($("<th/>").html(cols[colIndex]))
+          .css("color", theme[0])
+          .css("max-width", "3px");
+
+        $(table).append(headers);
+      }
+
+      for (var colIndex = 0; colIndex < cols.length; colIndex++) {
+        var val = data[m][cols[colIndex]];
+        if (val === undefined) {
+          val = "None";
+        }
+        if (val.type) {
+          content.append($("<td/>").html(changeDate(val)));
+        } else {
+          content.append($("<td/>").html(val));
+        }
+        $(table).append(content);
+      }
+    }
+
+    div.append(table);
+    return div;
+  }
+
+  function getInfraDetailsTable(data) {
+    var div = $("<div/>")
+      .addClass("mt-4 mx-5 card p-3")
+      .css("box-shadow", "0px 3px 6px rgba(0, 0, 0, 0.05)")
+      .css("border-radius", "6px")
+      .css("display", "block")
+      .hover(
+        function () {
+          var col = "1px solid " + theme[0];
+          $(this).css("border", col).css("cursor", "pointer");
+        },
+        function () {
+          $(this).css("border", "none");
+        }
+      );
+
+    var infraHeading = $("<span/>")
+      .html("Infra Details")
+      .addClass("tableHeading mb-2 ml-2");
+    infraHeading.css("color", theme[0]);
+    $(div).append(infraHeading);
+    var table = $("<table/>").addClass(
+      "table table-borderless table-responsive w-100 d-block d-md-table"
+    );
+    var cols = Headers(infraHeaders);
+    var headers = $("<tr>");
+    var content = $("<tr/>");
+    for (var colIndex = 0; colIndex < cols.length; colIndex++) {
+      var val = data[cols[colIndex]];
+
+      headers.append($("<th/>").html(cols[colIndex])).css("color", theme[0]);
+
+      $(table).append(headers);
+    }
+
+    for (var colIndex = 0; colIndex < cols.length; colIndex++) {
+      var val = data[infraHeaders[cols[colIndex]]];
+      if (val === undefined) {
+        val = "None";
+      }
+
+      content.append($("<td/>").html(val));
+
+      $(table).append(content);
+    }
+
+    div.append(table);
+    return div;
+  }
+
+  function createAccordionCards(val, index) {
+    var key, keys = Object.keys(val);
+    var n = keys.length;
+    var newobj = {}
+    while (n--) {
+      key = keys[n];
+      newobj[key.toUpperCase()] = val[key];
+    }
+    val = newobj;
+    var cards = Object.keys(val);
+    var dummy_card = new Set();
+    dummy_card.add("TOTAL");
+    dummy_card.add("PASS");
+    dummy_card.add("FAIL");
+    cards.forEach((ele) => {
+      dummy_card.add(ele.toUpperCase());
+    });
+    cards = Array.from(dummy_card);
+
+    var div = $("<div/>").addClass("mx-4 mt-4");
+    var flex = $("<div/>").addClass("d-flex flex-wrap justify-content-start");
+    for (var i = 0; i < cards.length; i++) {
+      var card = $("<div/>")
+        .addClass("card mx-4 mt-2")
+        .css("height", "92px")
+        .css("width", "170px")
+        .css("box-shadow", "0px 3px 6px rgba(0, 0, 0, 0.05)")
+        .css("border-radius", "6px")
+        .hover(
+          function () {
+            var col = "1px solid " + theme[0];
+
+            $(this).css("border", col).css("cursor", "pointer");
+
+          },
+          function () {
+            $(this).css("border", "1px solid rgba(0,0,0,.125)");
+          }
+        );
+
+      var cardBody = $("<div/>")
+        .addClass("card-body")
+        .css("align-self", "flex-start");
+      var cardTitle = $("<span/>")
+        .addClass("title-card")
+        .css("color", theme[0]);
+      // if(data[cards[i]]){
+      cardTitle.html(cards[i]);
+      //         }else{
+      // cardTitle.html(0);
+      //         }
+      var cardText = $("<span/>").addClass("text-card");
+      if (val[cards[i]]) {
+
+        card.attr("title", "Click to Filter");
+
+
+        cardText.html(val[cards[i]]);
+      } else {
+
+        card.css("background-color", "#EEEEEE");
+        card.hover(function () {
+          $(this).css('cursor', 'not-allowed');
+        });
+        cardText.html(0);
+      }
+      if (cards[i] === "PASS") {
+        cardText.addClass("passTest");
+      } else if (cards[i] === "FAIL") {
+        cardText.addClass("failTest");
+      } else if (cards[i] === "WARN") {
+        cardText.addClass("warnTest");
+      } else if (cards[i] === "INFO") {
+        cardText.addClass("infoTest");
+      } else if (cards[i] === "INCOMPLETE") {
+        cardText.addClass("incompleteTest");
+      } else if (cards[i] === "TOTAL") {
+        cardText.css("color", theme[0]);
+      } else {
+        cardText.addClass("othersTest");
+      }
+      cardBody.append(cardTitle).append("<br/>").append(cardText);
+      card.append(cardBody);
+
+      flex.append(card);
+      card.click(function (event) {
+        filterTable(
+          event.currentTarget.firstChild.firstChild.innerText,
+          index,
+          event.currentTarget.firstChild.lastChild.innerText
+        );
+      });
+    }
+
+    div.append(flex);
+    return div;
+  }
+  function filterTable(val, index, check) {
+    if (check > 0) {
+      var $filterableRows = $("#tabAccord" + index)
+        .find("tbody")
+        .find("tr")
+        .not(":first");
+      $filterableRows
+        .hide()
+        .filter(function () {
+          return (
+            $(this).filter(function () {
+              var tdText = $(this).find(".statusAccord").text().toLowerCase();
+
+              if (val === "TOTAL") {
+                val = "";
+              }
+              if (val === undefined) {
+                val = "";
+              } else {
+                val = val.toLowerCase();
+              }
+
+              return tdText.includes(val);
+            }).length === $(this).length
+          );
+        })
+        .show();
+    }
+  }
+
+  function getCardDetails(data, type) {
+    var key, keys = Object.keys(data);
+    var n = keys.length;
+    var newobj = {}
+    while (n--) {
+      key = keys[n];
+      newobj[key.toUpperCase()] = data[key];
+    }
+    data = newobj;
+    var cards = Object.keys(data);
+    var dummy_card = new Set();
+    dummy_card.add("TOTAL");
+    dummy_card.add("PASS");
+    dummy_card.add("FAIL");
+    cards.forEach((ele) => {
+      dummy_card.add(ele.toUpperCase());
+    });
+    cards = Array.from(dummy_card);
+
+    var cardValues = Object.values(data);
+    var div = $("<div/>").addClass("col-12 mx-2 mt-4");
+    var flex = $("<div/>").addClass("d-flex flex-wrap justify-content-start");
+    for (var i = 0; i < cards.length; i++) {
+      var card = $("<div/>")
+        .addClass("card mx-4 mt-2")
+        .css("height", "92px")
+        .css("width", "170px")
+        .css("box-shadow", "0px 3px 6px rgba(0, 0, 0, 0.05)")
+        .css("border-radius", "6px")
+        .hover(
+          function () {
+            var col = "1px solid " + theme[0];
+            $(this).css("border", col);
+            if (type === 'testcase') {
+              $(this).css("cursor", "pointer");
+            }
+          },
+          function () {
+
+            $(this).css("border", "1px solid rgba(0,0,0,.125)");
+
+          }
+        );
+
+      var cardBody = $("<div/>").addClass("card-body");
+      var cardTitle = $("<span/>")
+        .addClass("title-card")
+        .css("color", theme[0]);
+      // if(data[cards[i]]){
+      cardTitle.html(cards[i]);
+      //         }else{
+      // cardTitle.html(0);
+      //         }
+      var cardText = $("<span/>").addClass("text-card");
+      if (data[cards[i]]) {
+        if (type === 'testcase') {
+          card.attr("title", "Click to Filter");
+        }
+        cardText.html(data[cards[i]]);
+      } else {
+        if (type === 'testcase') {
+          card.css("background-color", "#EEEEEE");
+          card.hover(function () {
+            $(this).css('cursor', 'not-allowed');
+          });
+        }
+        cardText.html(0);
+      }
+      if (cards[i] === "PASS") {
+        cardText.addClass("passTest");
+      } else if (cards[i] === "FAIL") {
+        cardText.addClass("failTest");
+      } else if (cards[i] === "WARN") {
+        cardText.addClass("warnTest");
+      } else if (cards[i] === "INFO") {
+        cardText.addClass("infoTest");
+      } else if (cards[i] === "INCOMPLETE") {
+        cardText.addClass("incompleteTest");
+      } else if (cards[i] === "TOTAL") {
+        cardText.css("color", theme[0]);
+      } else {
+        cardText.addClass("othersTest");
+      }
+      cardBody.append(cardTitle).append("<br/>").append(cardText);
+      card.append(cardBody);
+      if (type === 'testcase') {
+        card.attr("data-toggle", "tooltip");
+        card.attr("data-placement", "bottom");
+
+        card.click(function (event) {
+
+          $("#tab").find("tbody").find("tr").not(".accordRow").not(".checkCollapse").not(":first").fadeOut("fast");
+
+          statusSearch(event.currentTarget.firstChild.firstChild.innerText, event.currentTarget.firstChild.lastChild.innerText);
+        });
+      }
+      flex.append(card);
+    }
+    div.append(flex);
+    return div;
+  }
+
+  function changeSerial(val) {
+    var serialobj = {
+      value: val + 1,
+      sortValue: val + 1,
+    };
+    return serialobj;
+  }
+
+  function changeTime(val) {
+    var data = new Date(val);
+    var abbrTZ = data.toString().match(/\(([A-Za-z\s].*)\)/)[1].split(' ').map(function (item) { return item[0] }).join('');
+    return data.toLocaleString('en-us', { month: 'long', day: 'numeric', year: 'numeric' }) + " " + data.toLocaleTimeString() + " (" + abbrTZ + ")";
+
+  }
+
+  function getDuration(start, end, index) {
+    var startTime = new Date(start).getTime();
+    var endTime = new Date(end).getTime();
+    var dur = (endTime - startTime) / 1000;
+    var objans = {
+      value: ans,
+      sortValue: dur,
+    };
+    if (dur < 60) {
+      objans.value = dur + " sec(s)";
+    } else if (dur >= 60 && dur < 3600) {
+      var ans = Math.floor(dur / 60) + " min ";
+      if (Math.floor(dur % 60) !== 0) {
+        ans = ans + Math.floor(dur % 60) + " sec(s)";
+      }
+      objans.value = ans;
+    } else if (dur >= 60 && dur < 86400) {
+      var ans = Math.floor(dur / 3600) + " hour ";
+      if (Math.floor((dur % 3600) / 60) !== 0) {
+        ans = ans + Math.floor((dur % 3600) / 60) + " min";
+      }
+      if (Math.floor((dur % 3600) % 60) !== 0) {
+        ans = ans + Math.floor((dur % 3600) % 60) + " sec(s)";
+      }
+
+      objans.value = ans;
+    }
+    if (!isNaN(index)) {
+      obj.Suits_Details.TestCase_Details[index]["DURATION"] = objans;
+    }
+    return objans;
+  }
+
+  function getOptions(val) {
+    var options = new Set();
+    options.add("All");
+    for (var i = 0; i < val.length; i++) {
+      options.add(val[i]["STATUS"]["value"]);
+    }
+    return Array.from(options);
+  }
+
+  function getsort(val) {
+    if (
+      val.target.className === "fa fa-angle-up ml-1" ||
+      val.target.className === "fa fa-angle-down ml-1"
+    ) {
+      if (lastsortHeader === "") {
+        lastsortHeader = val.target.id;
+        sortType = "asc";
+      } else if (val.target.id === lastsortHeader) {
+        if (sortType === "asc") {
+          sortType = "desc";
+        } else {
+          sortType = "asc";
+        }
+        lastsortHeader = val.target.id;
+      } else {
+        sortType = "asc";
+        lastsortHeader = val.target.id;
+      }
+      var tab = [...obj.Suits_Details.TestCase_Details];
+      if (sortType === "asc") {
+        for (var i = 0; i < tab.length; i++) {
+          for (var j = i + 1; j < tab.length; j++) {
+            if (
+              tab[i][val.target.id]["sortValue"] >
+              tab[j][val.target.id]["sortValue"]
+            ) {
+              var swap = tab[i];
+              tab[i] = tab[j];
+              tab[j] = swap;
+            }
+          }
+        }
+      } else {
+        for (var i = 0; i < tab.length; i++) {
+          for (var j = i + 1; j < tab.length; j++) {
+            if (
+              tab[i][val.target.id]["sortValue"] <
+              tab[j][val.target.id]["sortValue"]
+            ) {
+              var swap = tab[i];
+              tab[i] = tab[j];
+              tab[j] = swap;
+            }
+          }
+        }
+      }
+      obj.Suits_Details.TestCase_Details = tab;
+      $("#pills-testcase").children("div")[2].remove();
+      var testcaseDetailsTable = getTestcaseDetailsTable(tab);
+      $("#pills-testcase").append(testcaseDetailsTable);
+      myFunction();
+      var icon = $("<i/>").addClass("fa").css("font-size", "18px");
+      if (sortType === "asc") {
+        icon.addClass("fa-angle-up ml-1").css("vertical-align", "middle");
+      }
+      if (sortType === "desc") {
+        icon.addClass("fa-angle-down ml-1").css("vertical-align", "middle");
+      }
+      icon.attr("id", lastsortHeader);
+      if(lastsortHeader.includes('TIME'))
+      {
+        const arrid = lastsortHeader.split(' ');
+        var targetId = "#" + arrid[0] + "_" + arrid[1] + "_tc";
+        $(targetId).append(icon);
+
+      }
+      else
+      {
+      // icon.addEventListener("click",(e)=>{
+      // e.stopPropagation();
+      // });
+      var targetId = "#" + lastsortHeader + "_tc";
+      $(targetId).append(icon);
+      }
+
+      var $filterableRows = $("#tab").find("tbody").find("tr").not(":first");
+    }
+
+
+    else {
+      if (lastsortHeader === "") {
+        lastsortHeader = val.target.innerText;
+        sortType = "asc";
+      } else if (val.target.innerText === lastsortHeader) {
+        if (sortType === "asc") {
+          sortType = "desc";
+        } else {
+          sortType = "asc";
+        }
+        lastsortHeader = val.target.innerText;
+      } else {
+        sortType = "asc";
+        lastsortHeader = val.target.innerText;
+      }
+      var tab = [...obj.Suits_Details.TestCase_Details];
+      tab = changeFormat(tab);
+      if (sortType === "asc") {
+        for (var i = 0; i < tab.length; i++) {
+          for (var j = i + 1; j < tab.length; j++) {
+            if (
+              tab[i][val.target.innerText]["sortValue"] >
+              tab[j][val.target.innerText]["sortValue"]
+            ) {
+              var swap = tab[i];
+              tab[i] = tab[j];
+              tab[j] = swap;
+            }
+          }
+        }
+      } else {
+        for (var i = 0; i < tab.length; i++) {
+          for (var j = i + 1; j < tab.length; j++) {
+            if (
+              tab[i][val.target.innerText]["sortValue"] <
+              tab[j][val.target.innerText]["sortValue"]
+            ) {
+              var swap = tab[i];
+              tab[i] = tab[j];
+              tab[j] = swap;
+            }
+          }
+        }
+      }
+      obj.Suits_Details.TestCase_Details = tab;
+      $("#pills-testcase").children("div")[2].remove();
+      var testcaseDetailsTable = getTestcaseDetailsTable(tab);
+      $("#pills-testcase").append(testcaseDetailsTable);
+      myFunction();
+
+      var icon = $("<i/>").addClass("fa").css("font-size", "18px");
+      if (sortType === "asc") {
+        icon.addClass("fa-angle-up ml-1").css("vertical-align", "middle");
+      }
+      if (sortType === "desc") {
+        icon.addClass("fa-angle-down ml-1").css("vertical-align", "middle");
+      }
+
+      icon.attr("id", lastsortHeader);
+      if(lastsortHeader.includes('TIME'))
+      {
+        const arrid = lastsortHeader.split(' ');
+        var targetId = "#" + arrid[0] + "_" + arrid[1] + "_tc";
+        $(targetId).append(icon);
+
+      }
+      else
+      {
+      // icon.addEventListener("click",(e)=>{
+      // e.stopPropagation();
+      // });
+      var targetId = "#" + lastsortHeader + "_tc";
+      $(targetId).append(icon);
+      }
+
+      var $filterableRows = $("#tab").find("tbody").find("tr").not(":first");
+    }
+  }
+
+  function clickFunc(event) {
+    event.stopPropagation();
+  }
+  function Headers(list) {
+    var columns = [];
+    row = list;
+    for (var k in row) {
+      if ($.inArray(k, columns) == -1) {
+        columns.push(k);
+      }
+    }
+    return columns;
+  }
+
+
+  function showFilterCards(val) {
+    if (val === "show") {
+      $("#filtercard").css("display", "block");
+    } else {
+      $("#filtercard").css("display", "none");
+    }
+  }
+
+  function showFilter(val) {
+    if (val !== "overview") {
+      $("#filters").css("display", "block");
+    } else {
+      $("#filters").css("display", "none");
+    }
+  }
+
+  function myFunction() {
+    var inputs = $(".search-key");
+    for (var i = 0; i < inputs.length; i++) {
+      if (inputs[i].id === "status") {
+        inputs[i].value = "All";
+      } else {
+        inputs[i].value = "";
+      }
+    }
+
+    var $filterableRows = $("#tab tbody tr");
+    $filterableRows.show();
+  }
+
+  function openDialog() {
+    $("a[name=Test]").on("click", function (e) {
+      e.preventDefault();
+      $("#modal").load(this.href).dialog({ modal: true });
+    });
+  }
+
+  function changeDate(val) {
+    var temp = val.type.toLowerCase();
+    var d = new Date(val.value);
+    if (temp === "date") {
+      return d.toLocaleString('en-us', { month: 'long', day: 'numeric', year: 'numeric' });
+    } else if (temp === "time") {
+      return d.toLocaleTimeString();
+    } else if (temp === "datetime") {
+      return d.toLocaleString('en-us', { month: 'long', day: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' });
+    }
+  }
+
+  function convertIntoDateTime(value) {
+    var date = new Date(value);
+    return date.toLocaleString('en-us', { month: 'long', day: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' });
+  }
+  function closeModal(id) {
+    var modal = document.getElementById(id);
+    document.getElementById("trimModalcontent").innerHTML = "";
+    document.getElementById("trimModaltitle").innerHTML = "";
+    modal.style.display = "none";
+
+  }
+  function getTrimData(data, column) {
+    var div = document.createElement("div");
+    var span = document.createElement("span");
+    var button = document.createElement("button");
+    button.innerHTML = "See More";
+    button.addEventListener("click", function () {
+      var trimModal = document.getElementById("trimModal");
+      trimModal.style.display = "block";
+      var trimModalcontent = document.getElementById("trimModalcontent");
+      trimModalcontent.innerHTML = data;
+      var trimModaltitle = document.getElementById("trimModaltitle");
+      trimModaltitle.innerHTML = column.toUpperCase();
+      trimModal.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+
+    });
+    button.setAttribute("class", "ml-2 btn btn-link");
+    if (data && data.length > 150) {
+      span.innerHTML = data.slice(0, 150) + "...";
+      span.appendChild(button);
+    } else {
+      span.innerHTML = data;
+    }
+    div.appendChild(span);
+
+    return div;
+  }
+
+
+
+  function createSubsteps(val, event) {
+    var modal = document.getElementById("trimModal");
+    modal.style.display = "block";
+    var trimModaltitle = document.getElementById("trimModaltitle");
+    trimModaltitle.innerHTML = "SUBSTEPS";
+    var trimModalcontent = document.getElementById("trimModalcontent");
+    var list = val[parseInt(event.target.id)]['subSteps'];
+    var cols = [];
+    for (var i = 0; i < list.length; i++) {
+      for (var k in list[i]) {
+        if (cols.indexOf(k) === -1) {
+          // Push all keys to the array
+
+          cols.push(k);
+        }
+      }
+    }
+
+
+
+    var table = document.createElement("table");
+    table.className =
+      "table table-borderless d-block d-md-table text-center";
+    table.style.boxShadow = "0px 4px 8px rgba(0, 71, 136, 0.11)";
+    table.style.borderRadius = "4px";
+    // Create table row tr element of a table
+    var tr = table.insertRow(-1);
+    for (var i = 0; i < cols.length; i++) {
+      // Create the table header th element
+      var theader = document.createElement("th");
+      theader.style.backgroundColor =
+        theme[2].substring(0, theme[2].length - 1) + ", 0.1)";
+      theader.innerHTML = cols[i];
+
+      // Append columnName to the table row
+      tr.appendChild(theader);
+    }
+
+
+    for (var i = 0; i < list.length; i++) {
+      // Create a new row
+      trow = table.insertRow(-1);
+
+      trow.style.backgroundColor = "#FFFFFF";
+      for (var j = 0; j < cols.length; j++) {
+        var cell = trow.insertCell(-1);
+        cell.setAttribute("class", "align-middle setWidth");
+        if (cols[j] === "status") {
+          // cell.innerHTML = list[i][cols[j]];
+          var link = document.createElement("div");
+          link.className = "btn-sm";
+          link.innerHTML = list[i][cols[j]];
+          cell.appendChild(link);
+          if (list[i][cols[j]] === "PASS") {
+            link.className = "statusColorPass";
+          } else if (list[i][cols[j]] === "FAIL") {
+            link.className = "statusColorFail";
+          } else if (list[i][cols[j]] === "INFO") {
+            link.className = "statusColorInfo";
+          } else if (list[i][cols[j]] === "WARN") {
+            link.className = "statusColorWarn";
+          } else if (list[i][cols[j]] === "INCOMPLETE") {
+            link.className = "statusColorIncomplete";
+          } else {
+            link.className = "statusColorOthers";
+          }
+        } else {
+          cell.innerHTML = list[i][cols[j]];
+        }
+      }
+    }
+
+    trimModalcontent.append(table);
+    console.log(cols);
+  }
+
+
+  function statusSearch(val, count) {
+    if (count > 0) {
+      var $filterableRows = $("#tab")
+        .find("tbody")
+        .find(".checkCollapse")
+
+      $filterableRows
+        .hide()
+        .filter(function () {
+          return (
+            $(this).filter(function () {
+              var tdText = $(this).find(".status").text().toLowerCase();
+              console.log(tdText);
+
+
+              if (val === "TOTAL") {
+                val = "";
+              }
+              if (val === undefined) {
+                val = "";
+              } else {
+                val = val.toLowerCase();
+              }
+
+              return tdText.includes(val);
+            }).length === $(this).length
+          );
+        })
+        .show();
+    }
+  }
+
+</script>
+
+</html>

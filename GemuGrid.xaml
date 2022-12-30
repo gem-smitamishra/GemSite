@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="GemuGrid" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="630.6666666666666,1779.3333333333333" sap2010:WorkflowViewState.IdRef="GemuGrid_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:gga="clr-namespace:GemEcosystem.GemSURF.Activities;assembly=GemEcosystem.GemSURF.Activities" xmlns:ggm="clr-namespace:GemEcosystem.GemSURF.Models;assembly=GemEcosystem.GemSURF" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="GemuGrid" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="722.6666666666666,4115.333333333333" sap2010:WorkflowViewState.IdRef="GemuGrid_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:gga="clr-namespace:GemEcosystem.GemSURF.Activities;assembly=GemEcosystem.GemSURF.Activities" xmlns:ggm="clr-namespace:GemEcosystem.GemSURF.Models;assembly=GemEcosystem.GemSURF" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="76">
       <x:String>System.Activities</x:String>
@@ -41,10 +41,12 @@
       <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
       <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
       <x:String>GemEcosystem.GemSURF.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="51">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="102">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>System.Private.CoreLib</AssemblyReference>
@@ -95,9 +97,14 @@
       <AssemblyReference>System.Private.Uri</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="GemuGrid" sap:VirtualizedContainerService.HintSize="640.6666666666666,3992" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="GemuGrid" sap:VirtualizedContainerService.HintSize="732.6666666666666,4050.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ggm:GlobalConfig" Name="Globlconf" />
       <Variable x:TypeArguments="ggm:SelectorMap" Name="SelectorMap" />
@@ -108,14 +115,14 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <gga:InitialiseTest ConfigFile="{x:Null}" ContinueOnError="False" DisplayName="Initialise Test" GlobalConfigs="[Globlconf]" sap:VirtualizedContainerService.HintSize="578.6666666666666,144.66666666666666" sap2010:WorkflowViewState.IdRef="InitialiseTest_1" SelectorMap="[SelectorMap]" TestCaseName="GemUGrid" TestData="[TestData]" />
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="578.6666666666666,3550" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="d8761611-377d-4637-9af9-2fce321f6317" Version="V2">
+    <gga:InitialiseTest ConfigFile="{x:Null}" ContinueOnError="False" DisplayName="Initialise Test" GlobalConfigs="[Globlconf]" sap:VirtualizedContainerService.HintSize="670.6666666666666,136" sap2010:WorkflowViewState.IdRef="InitialiseTest_1" SelectorMap="[SelectorMap]" TestCaseName="GemUGrid" TestData="[TestData]" />
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application/Browser" sap:VirtualizedContainerService.HintSize="670.6666666666666,3637.3333333333335" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="d8761611-377d-4637-9af9-2fce321f6317" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="544.6666666666666,3374" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="636.6666666666666,3470" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="Content" />
               <Variable x:TypeArguments="x:String" Name="Flag" />
@@ -126,7 +133,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Assign sap:VirtualizedContainerService.HintSize="482.6666666666667,72" sap2010:WorkflowViewState.IdRef="Assign_1">
+            <Assign sap:VirtualizedContainerService.HintSize="574.6666666666666,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_1">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[Flag]</OutArgument>
               </Assign.To>
@@ -134,7 +141,7 @@
                 <InArgument x:TypeArguments="x:String">true</InArgument>
               </Assign.Value>
             </Assign>
-            <uix:NMouseScroll KeyModifiers="{x:Null}" DelayAfter="5" Direction="Down" DisplayName="Mouse Scroll" sap:VirtualizedContainerService.HintSize="482.6666666666667,269.3333333333333" sap2010:WorkflowViewState.IdRef="NMouseScroll_1" InteractionMode="HardwareEvents" MovementUnits="10" Version="V3">
+            <uix:NMouseScroll KeyModifiers="{x:Null}" DelayAfter="5" Direction="Down" DisplayName="Mouse Scroll" sap:VirtualizedContainerService.HintSize="574.6666666666666,260.6666666666667" sap2010:WorkflowViewState.IdRef="NMouseScroll_1" InteractionMode="HardwareEvents" MovementUnits="10" Version="V3">
               <uix:NMouseScroll.SearchedElement>
                 <uix:SearchedElement>
                   <uix:SearchedElement.Target>
@@ -149,20 +156,21 @@
                 <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" FullSelectorArgument="[SelectorMap(&quot;site&quot;).ToString]" Guid="187c3843-7230-410e-9468-7f29041bc96c" SearchSteps="Selector" />
               </uix:NMouseScroll.Target>
             </uix:NMouseScroll>
-            <uix:NGetText DisplayName="Get Text" sap:VirtualizedContainerService.HintSize="482.6666666666667,168" sap2010:WorkflowViewState.IdRef="NGetText_1" TextString="[Content]" Version="V3">
+            <uix:NGetText DisplayName="Get Text" sap:VirtualizedContainerService.HintSize="574.6666666666666,159.33333333333334" sap2010:WorkflowViewState.IdRef="NGetText_1" TextString="[Content]" Version="V3">
               <uix:NGetText.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" FullSelectorArgument="[SelectorMap(&quot;GemUContent&quot;).ToString]" Guid="7ed67e8f-1c19-45d6-90a7-3ef12393cba7" SearchSteps="Selector" />
               </uix:NGetText.Target>
             </uix:NGetText>
-            <If Condition="[Content.Contains(TestData(0)(0).ToString)]" sap:VirtualizedContainerService.HintSize="482.6666666666667,557.3333333333334" sap2010:WorkflowViewState.IdRef="If_1">
+            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="574.6666666666666,86.66666666666667" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[Content]" />
+            <If Condition="[Content.Contains(TestData(0)(0).ToString)]" sap:VirtualizedContainerService.HintSize="574.6666666666666,574.6666666666666" sap2010:WorkflowViewState.IdRef="If_1">
               <If.Then>
-                <Sequence sap:VirtualizedContainerService.HintSize="400,194" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <Sequence sap:VirtualizedContainerService.HintSize="496,196" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Assign sap:VirtualizedContainerService.HintSize="338,72" sap2010:WorkflowViewState.IdRef="Assign_2">
+                  <Assign sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_2">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:String">[Flag]</OutArgument>
                     </Assign.To>
@@ -173,13 +181,13 @@
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Sequence sap:VirtualizedContainerService.HintSize="400,194" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                <Sequence sap:VirtualizedContainerService.HintSize="496,196" sap2010:WorkflowViewState.IdRef="Sequence_4">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Assign sap:VirtualizedContainerService.HintSize="338,72" sap2010:WorkflowViewState.IdRef="Assign_3">
+                  <Assign sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_3">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:String">[Flag]</OutArgument>
                     </Assign.To>
@@ -190,30 +198,30 @@
                 </Sequence>
               </If.Else>
             </If>
-            <uix:NHover DisplayName="Hover" sap:VirtualizedContainerService.HintSize="482.6666666666667,168" HoverTime="4" sap2010:WorkflowViewState.IdRef="NHover_1" Version="V3">
+            <uix:NHover DelayAfter="5" DelayBefore="5" DisplayName="Hover" sap:VirtualizedContainerService.HintSize="574.6666666666666,159.33333333333334" HoverTime="4" sap2010:WorkflowViewState.IdRef="NHover_2" Version="V3">
               <uix:NHover.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" FullSelectorArgument="[SelectorMap(&quot;GemUbtn&quot;).ToString]" Guid="6d5f18d7-a87a-43a8-a378-14979a415891" SearchSteps="Selector" />
               </uix:NHover.Target>
             </uix:NHover>
-            <uix:NClick ClickType="Single" DelayAfter="5" DisplayName="Click" sap:VirtualizedContainerService.HintSize="482.6666666666667,168" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" Version="V3">
+            <uix:NClick ClickType="Single" DelayAfter="5" DisplayName="Click" sap:VirtualizedContainerService.HintSize="574.6666666666666,159.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" FullSelectorArgument="[SelectorMap(&quot;GemUbtn&quot;).ToString]" Guid="eaabb349-cfd9-4d6d-9ef3-9694aaa9d628" SearchSteps="Selector" />
               </uix:NClick.Target>
             </uix:NClick>
-            <uix:NGetText DelayBefore="2" DisplayName="Get Text" sap:VirtualizedContainerService.HintSize="482.6666666666667,168" sap2010:WorkflowViewState.IdRef="NGetText_2" TextString="[Result]" Version="V3">
+            <uix:NGetText DelayBefore="2" DisplayName="Get Text" sap:VirtualizedContainerService.HintSize="574.6666666666666,159.33333333333334" sap2010:WorkflowViewState.IdRef="NGetText_2" TextString="[Result]" Version="V3">
               <uix:NGetText.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" FullSelectorArgument="[SelectorMap(&quot;ExploreHeading&quot;).ToString]" Guid="04b8b26f-24fa-4dc2-9178-b601682fe41e" SearchSteps="Selector" />
               </uix:NGetText.Target>
             </uix:NGetText>
-            <If Condition="[Result.Contains(TestData(0)(1).ToString)]" sap:VirtualizedContainerService.HintSize="482.6666666666667,557.3333333333334" sap2010:WorkflowViewState.IdRef="If_2">
+            <If Condition="[Result.Contains(TestData(0)(1).ToString)]" sap:VirtualizedContainerService.HintSize="574.6666666666666,574.6666666666666" sap2010:WorkflowViewState.IdRef="If_2">
               <If.Then>
-                <Sequence sap:VirtualizedContainerService.HintSize="400,194" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                <Sequence sap:VirtualizedContainerService.HintSize="496,196" sap2010:WorkflowViewState.IdRef="Sequence_5">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Assign sap:VirtualizedContainerService.HintSize="338,72" sap2010:WorkflowViewState.IdRef="Assign_4">
+                  <Assign sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_4">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:String">[Flag]</OutArgument>
                     </Assign.To>
@@ -224,13 +232,13 @@
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Sequence sap:VirtualizedContainerService.HintSize="400,194" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                <Sequence sap:VirtualizedContainerService.HintSize="496,196" sap2010:WorkflowViewState.IdRef="Sequence_6">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Assign sap:VirtualizedContainerService.HintSize="338,72" sap2010:WorkflowViewState.IdRef="Assign_5">
+                  <Assign sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_5">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:String">[Flag]</OutArgument>
                     </Assign.To>
@@ -241,25 +249,25 @@
                 </Sequence>
               </If.Else>
             </If>
-            <If Condition="[Flag=&quot;true&quot;]" sap:VirtualizedContainerService.HintSize="482.6666666666667,801.3333333333334" sap2010:WorkflowViewState.IdRef="If_3">
+            <If Condition="[Flag=&quot;true&quot;]" sap:VirtualizedContainerService.HintSize="574.6666666666666,774.6666666666666" sap2010:WorkflowViewState.IdRef="If_3">
               <If.Then>
-                <Sequence sap:VirtualizedContainerService.HintSize="400,316" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                <Sequence sap:VirtualizedContainerService.HintSize="400,296" sap2010:WorkflowViewState.IdRef="Sequence_7">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <gga:LogStatus ContinueOnError="False" DisplayName="Log Status" GlobalConfigs="[Globlconf]" sap:VirtualizedContainerService.HintSize="338,194" sap2010:WorkflowViewState.IdRef="LogStatus_1" ScreenShot="Yes" TestStep="GemUGrid" TestStepDesciption="Verifying content and navigation of button" TestStepStatus="PASS" />
+                  <gga:LogStatus ContinueOnError="False" DisplayName="Log Status" GlobalConfigs="[Globlconf]" sap:VirtualizedContainerService.HintSize="338,185.33333333333334" sap2010:WorkflowViewState.IdRef="LogStatus_1" ScreenShot="Yes" TestStep="GemUGrid" TestStepDesciption="Verifying content and navigation of button" TestStepStatus="PASS" />
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Sequence sap:VirtualizedContainerService.HintSize="400,316" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                <Sequence sap:VirtualizedContainerService.HintSize="400,296" sap2010:WorkflowViewState.IdRef="Sequence_8">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <gga:LogStatus ContinueOnError="False" DisplayName="Log Status" GlobalConfigs="[Globlconf]" sap:VirtualizedContainerService.HintSize="338,194" sap2010:WorkflowViewState.IdRef="LogStatus_2" ScreenShot="Yes" TestStep="GemUGrid" TestStepDesciption="Verifying content and navigation of button" TestStepStatus="FAIL" />
+                  <gga:LogStatus ContinueOnError="False" DisplayName="Log Status" GlobalConfigs="[Globlconf]" sap:VirtualizedContainerService.HintSize="338,185.33333333333334" sap2010:WorkflowViewState.IdRef="LogStatus_2" ScreenShot="Yes" TestStep="GemUGrid" TestStepDesciption="Verifying content and navigation of button" TestStepStatus="FAIL" />
                 </Sequence>
               </If.Else>
             </If>
@@ -270,6 +278,6 @@
         <uix:TargetApp Area="0, 0, 0, 0" Selector="[SelectorMap(&quot;site&quot;).ToString]" Url="https://dev.geminisolutions.com/" />
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
-    <gga:StopTest ContinueOnError="False" DisplayName="Stop Test" GlobalConfigs="[Globlconf]" sap:VirtualizedContainerService.HintSize="578.6666666666666,95.33333333333333" sap2010:WorkflowViewState.IdRef="StopTest_1" />
+    <gga:StopTest ContinueOnError="False" DisplayName="Stop Test" GlobalConfigs="[Globlconf]" sap:VirtualizedContainerService.HintSize="670.6666666666666,86.66666666666667" sap2010:WorkflowViewState.IdRef="StopTest_1" />
   </Sequence>
 </Activity>
