@@ -45,9 +45,12 @@
 	"ClubHeading":"<html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /><webctrl tag='P' class='ClubBanner_title___0bYJ' />",
 	"ClubSection":"<html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /><webctrl aaname='{value}' class='ClubContent_stepHeading1__wl51r' />",
 		"BenefitsSection":"<html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /><webctrl tag='H1' aaname='Benefits We Offer' />",
-	"benefitsSection":"<html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /><webctrl class='Benefits_benefitHeading__jcvcu' aaname='{value}' />"
+	"benefitsSection":"<html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /><webctrl class='Benefits_benefitHeading__jcvcu' aaname='{value}' />",
 	
-	
+	"Followbtn":"<html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /><webctrl parentclass='Instagram_followIconWrapper__UDgVm' />",
+	"Instagrmaheading":"<html app='chrome.exe' title='Gemini Solutions (@gemini.solutions) • Instagram photos and videos' /><webctrl aria-label='Instagram' />",
+	"SolutionsOption":"<html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /><webctrl tag='LI' innertext='Solutions' />",
+	"SolutionsLinks":"<html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /><webctrl parentid='nav-menu-fixed' aaname='{value}'/>"
 	
 	
 
