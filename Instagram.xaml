@@ -1,6 +1,6 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Instagram" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1002,3895.3333333333335" sap2010:WorkflowViewState.IdRef="Instagram_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:gga="clr-namespace:GemEcosystem.GemSURF.Activities;assembly=GemEcosystem.GemSURF.Activities" xmlns:ggm="clr-namespace:GemEcosystem.GemSURF.Models;assembly=GemEcosystem.GemSURF" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Instagram" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="727.3333333333334,2403.3333333333335" sap2010:WorkflowViewState.IdRef="Instagram_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:gga="clr-namespace:GemEcosystem.GemSURF.Activities;assembly=GemEcosystem.GemSURF.Activities" xmlns:ggm="clr-namespace:GemEcosystem.GemSURF.Models;assembly=GemEcosystem.GemSURF" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="76">
+    <scg:List x:TypeArguments="x:String" Capacity="41">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -41,10 +41,11 @@
       <x:String>GemEcosystem.GemSURF.Enums</x:String>
       <x:String>UiPath.UIAutomationNext.Contracts</x:String>
       <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="98">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="54">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>System.Private.CoreLib</AssemblyReference>
@@ -100,34 +101,32 @@
       <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Instagram" sap:VirtualizedContainerService.HintSize="1012,3830.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Instagram" sap:VirtualizedContainerService.HintSize="636.6666666666666,2338.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ggm:GlobalConfig" Name="Globalconf" />
       <Variable x:TypeArguments="ggm:SelectorMap" Name="SelectorMap" />
       <Variable x:TypeArguments="ggm:TestData" Name="TestData" />
+      <Variable x:TypeArguments="x:String" Name="URL" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <gga:InitialiseTest ConfigFile="{x:Null}" ContinueOnError="False" DisplayName="Initialise Test" GlobalConfigs="[Globalconf]" sap:VirtualizedContainerService.HintSize="950,136" sap2010:WorkflowViewState.IdRef="InitialiseTest_1" SelectorMap="[SelectorMap]" TestCaseName="Instagramfollowbtn" TestData="[TestData]" />
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Gemini Solutions | IT Consulting, Product Development" sap:VirtualizedContainerService.HintSize="950,3417.3333333333335" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="a4226c52-78ba-44f1-8ae2-7c50768b6771" Version="V2">
+    <gga:InitialiseTest ConfigFile="{x:Null}" ContinueOnError="False" DisplayName="Initialise Test" GlobalConfigs="[Globalconf]" sap:VirtualizedContainerService.HintSize="574.6666666666666,136" sap2010:WorkflowViewState.IdRef="InitialiseTest_1" SelectorMap="[SelectorMap]" TestCaseName="Instagramfollowbtn" TestData="[TestData]" />
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Gemini Solutions | IT Consulting, Product Development" sap:VirtualizedContainerService.HintSize="574.6666666666666,1925.3333333333333" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="a4226c52-78ba-44f1-8ae2-7c50768b6771" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="916,3198" sap2010:WorkflowViewState.IdRef="Sequence_4">
-            <Sequence.Variables>
-              <Variable x:TypeArguments="x:String" Name="URL" />
-            </Sequence.Variables>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="540.6666666666666,1706" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NMouseScroll KeyModifiers="{x:Null}" DelayAfter="5" DelayBefore="5" Direction="Down" DisplayName="Mouse Scroll" sap:VirtualizedContainerService.HintSize="854,240.66666666666666" sap2010:WorkflowViewState.IdRef="NMouseScroll_1" InteractionMode="HardwareEvents" MovementUnits="10" Version="V3">
+            <uix:NMouseScroll KeyModifiers="{x:Null}" DelayAfter="5" DelayBefore="5" Direction="Down" DisplayName="Mouse Scroll" sap:VirtualizedContainerService.HintSize="478.6666666666667,240.66666666666666" sap2010:WorkflowViewState.IdRef="NMouseScroll_1" InteractionMode="HardwareEvents" MovementUnits="10" Version="V3">
               <uix:NMouseScroll.SearchedElement>
                 <uix:SearchedElement>
                   <uix:SearchedElement.Target>
@@ -139,116 +138,39 @@
                 </uix:SearchedElement>
               </uix:NMouseScroll.SearchedElement>
             </uix:NMouseScroll>
-            <uix:NClick ClickType="Single" DisplayName="Click" sap:VirtualizedContainerService.HintSize="854,159.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" Version="V3">
+            <uix:NClick ClickType="Single" DelayAfter="5" DisplayName="Click" sap:VirtualizedContainerService.HintSize="478.6666666666667,159.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" FullSelectorArgument="[SelectorMap(&quot;Followbtn&quot;).ToString]" Guid="20da6f81-5c46-4c47-a0c3-126fb7f49081" SearchSteps="Selector" />
               </uix:NClick.Target>
             </uix:NClick>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="854,298" sap2010:WorkflowViewState.IdRef="CommentOut_7">
-              <ui:CommentOut.Body>
-                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="400,218" sap2010:WorkflowViewState.IdRef="Sequence_18">
+            <uix:NGetText DisplayName="Get Text" sap:VirtualizedContainerService.HintSize="478.6666666666667,159.33333333333334" sap2010:WorkflowViewState.IdRef="NGetText_1" TextString="[URL]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" FullSelectorArgument="[SelectorMap(&quot;AddressBar&quot;).ToString]" Guid="92b51f57-65b2-4955-b176-18aa20a7bda9" SearchSteps="Selector" />
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <If Condition="[URL.Contains(&quot;instagram&quot;)]" sap:VirtualizedContainerService.HintSize="478.6666666666667,910.6666666666666" sap2010:WorkflowViewState.IdRef="If_2">
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="400,432" sap2010:WorkflowViewState.IdRef="Sequence_7">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:Activate DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Activate 'PATH'" sap:VirtualizedContainerService.HintSize="338,107.33333333333333" sap2010:WorkflowViewState.IdRef="Activate_1">
-                    <ui:Activate.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="39eb3c4c-0d44-4b0b-a156-79aec6508797" InformativeScreenshot="557b7ca002c3314c2e77d5042bcba066" Selector="[SelectorMap(&quot;Instagrmaheading&quot;).ToString]">
-                        <ui:Target.TimeoutMS>
-                          <InArgument x:TypeArguments="x:Int32" />
-                        </ui:Target.TimeoutMS>
-                        <ui:Target.WaitForReady>
-                          <InArgument x:TypeArguments="ui:WaitForReady" />
-                        </ui:Target.WaitForReady>
-                      </ui:Target>
-                    </ui:Activate.Target>
-                  </ui:Activate>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="338,96" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;instragram page is opened successfully&quot;]" />
+                  <gga:LogStatus ContinueOnError="False" DisplayName="Log Status" GlobalConfigs="[Globalconf]" sap:VirtualizedContainerService.HintSize="338,185.33333333333334" sap2010:WorkflowViewState.IdRef="LogStatus_3" ScreenShot="Yes" TestStep="click n follow btn" TestStepDesciption="in Life at gemini,follow btn is work correctly" TestStepStatus="PASS" />
                 </Sequence>
-              </ui:CommentOut.Body>
-            </ui:CommentOut>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="854,376" sap2010:WorkflowViewState.IdRef="CommentOut_3">
-              <ui:CommentOut.Body>
-                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="400,296" sap2010:WorkflowViewState.IdRef="Sequence_9">
+              </If.Then>
+              <If.Else>
+                <Sequence sap:VirtualizedContainerService.HintSize="400,296" sap2010:WorkflowViewState.IdRef="Sequence_8">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="338,185.33333333333334" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_4" Shortcuts="[d(hk)][d(ctrl)][k(tab)][u(ctrl)][u(hk)]" Version="V3" />
+                  <gga:LogStatus ContinueOnError="False" DisplayName="Log Status" GlobalConfigs="[Globalconf]" sap:VirtualizedContainerService.HintSize="338,185.33333333333334" sap2010:WorkflowViewState.IdRef="LogStatus_4" ScreenShot="Yes" TestStep="click n follow btn" TestStepDesciption="in Life at gemini,follow btn is not work correctly" TestStepStatus="FAIL" />
                 </Sequence>
-              </ui:CommentOut.Body>
-            </ui:CommentOut>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="854,280" sap2010:WorkflowViewState.IdRef="CommentOut_5">
-              <ui:CommentOut.Body>
-                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="400,200" sap2010:WorkflowViewState.IdRef="Sequence_13">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <uix:NGetUrl CurrentUrl="[URL]" DelayBefore="5" DisplayName="Get URL" sap:VirtualizedContainerService.HintSize="338,89.33333333333333" sap2010:WorkflowViewState.IdRef="NGetUrl_2" Version="V3" />
-                </Sequence>
-              </ui:CommentOut.Body>
-            </ui:CommentOut>
-            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="854,965.3333333333334" sap2010:WorkflowViewState.IdRef="CommentOut_6">
-              <ui:CommentOut.Body>
-                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="540.6666666666666,885.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_14">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <If Condition="[URL.Contains(&quot;instagram&quot;)]" sap:VirtualizedContainerService.HintSize="478.6666666666667,774.6666666666666" sap2010:WorkflowViewState.IdRef="If_1">
-                    <If.Then>
-                      <Sequence sap:VirtualizedContainerService.HintSize="400,296" sap2010:WorkflowViewState.IdRef="Sequence_7">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <gga:LogStatus ContinueOnError="False" DisplayName="Log Status" GlobalConfigs="[Globalconf]" sap:VirtualizedContainerService.HintSize="338,185.33333333333334" sap2010:WorkflowViewState.IdRef="LogStatus_3" ScreenShot="Yes" TestStep="click n follow btn" TestStepDesciption="in Life at gemini,follow btn is work correctly" TestStepStatus="PASS" />
-                      </Sequence>
-                    </If.Then>
-                    <If.Else>
-                      <Sequence sap:VirtualizedContainerService.HintSize="400,296" sap2010:WorkflowViewState.IdRef="Sequence_8">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <gga:LogStatus ContinueOnError="False" DisplayName="Log Status" GlobalConfigs="[Globalconf]" sap:VirtualizedContainerService.HintSize="338,185.33333333333334" sap2010:WorkflowViewState.IdRef="LogStatus_4" ScreenShot="Yes" TestStep="click n follow btn" TestStepDesciption="in Life at gemini,follow btn is not work correctly" TestStepStatus="FAIL" />
-                      </Sequence>
-                    </If.Else>
-                  </If>
-                </Sequence>
-              </ui:CommentOut.Body>
-            </ui:CommentOut>
-            <uix:NCheckState DisplayName="Check App State" sap:VirtualizedContainerService.HintSize="854,522.6666666666666" sap2010:WorkflowViewState.IdRef="NCheckState_3" Timeout="5" Version="V3">
-              <uix:NCheckState.IfExists>
-                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="400,301.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_19">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <gga:LogStatus ContinueOnError="False" DisplayName="Log Status" GlobalConfigs="[Globalconf]" sap:VirtualizedContainerService.HintSize="338,185.33333333333334" sap2010:WorkflowViewState.IdRef="LogStatus_9" ScreenShot="Yes" TestStep="click n follow btn" TestStepDesciption="in Life at gemini,follow btn is work correctly" TestStepStatus="PASS" />
-                </Sequence>
-              </uix:NCheckState.IfExists>
-              <uix:NCheckState.IfNotExists>
-                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="400,301.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_20">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <gga:LogStatus ContinueOnError="False" DisplayName="Log Status" GlobalConfigs="[Globalconf]" sap:VirtualizedContainerService.HintSize="338,185.33333333333334" sap2010:WorkflowViewState.IdRef="LogStatus_10" ScreenShot="Yes" TestStep="click n follow btn" TestStepDesciption="in Life at gemini,follow btn is not work correctly" TestStepStatus="FAIL" />
-                </Sequence>
-              </uix:NCheckState.IfNotExists>
-              <uix:NCheckState.Target>
-                <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" FullSelectorArgument="[SelectorMap(&quot;Instagrmaheading&quot;).ToString]" Guid="c9b88135-64f6-41bd-bc19-4548a706bba5" SearchSteps="Selector" />
-              </uix:NCheckState.Target>
-            </uix:NCheckState>
+              </If.Else>
+            </If>
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>
@@ -256,6 +178,6 @@
         <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="7d5fcb3ebd2f4bda32807338b459c240.jpg" Selector="&lt;html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /&gt;" Url="https://dev.geminisolutions.com/life-at-gemini" />
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
-    <gga:StopTest ContinueOnError="False" DisplayName="Stop Test" GlobalConfigs="[Globalconf]" sap:VirtualizedContainerService.HintSize="950,86.66666666666667" sap2010:WorkflowViewState.IdRef="StopTest_1" />
+    <gga:StopTest ContinueOnError="False" DisplayName="Stop Test" GlobalConfigs="[Globalconf]" sap:VirtualizedContainerService.HintSize="574.6666666666666,86.66666666666667" sap2010:WorkflowViewState.IdRef="StopTest_1" />
   </Sequence>
 </Activity>

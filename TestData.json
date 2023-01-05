@@ -14,6 +14,15 @@
 "LifeatGemini":[["Technology Club","CSR Club","Entrepreneurship Club","Gemini on Wheels Club","Cultural Club","Sports Club"]],
 "ClubSections":["Technology Club","CSR Club","Entrepreneurship Club","Gemini on Wheels Club","Cultural Club","Sports Club"],
 "BenefitsSection":["Health","Gem University","Refer &am"],
-"SolutionMenu":[["Why Gemini","All Services"]]
+"SolutionMenu":[["Why Gemini","All Services"]],
+"SolutionsType":["Application Development","Digital Offerings","Managed Services","Cloud Services &amp; Solutions","Data Engineering","Data Science","Infrastructure"],
+"Solutions Navigation":["Application Development","Digital Offerings","Managed Services","Cloud Services &amp; Solutions","Data Engineering","Data Science","Infrastructure"],
+"Technologies Options":["Frontend","Core Development","Databases","Cloud","BI &amp; Analytics","Mobility"],
+"TechnologiesNavigation":["Frontend","Core Development","Databases","Cloud","BI &amp; Analytics","Mobility"],
+"GemuOptions":["About GemU","Campus Connect","Blogs"],
+"GemU Navigation":["About GemU","Campus Connect","Blogs"],
+"Careers Options":["Career","Hiring Process","Perks &amp; Benefits"],
+"Careers Navigation":["Career","Hiring Process","Perks &amp; Benefits"],
+"Contact navigation":["View Our Work"]
 
 }
