@@ -8,7 +8,7 @@
 "InsightGrid":["Converting Legacy to Metadata Driven Framework","Recovery And Stabilization Of Business-Critical Applications ","Portfolio Optimization Automation","Creating A Common Data Provider In Excel For All Projects","Pricing Portal Application","Oracle 19c ANA Upgrade Regression Test"],
 "GemUGrid":["Gem University is an in-house university where we intend to provide the best of the opportunities to our employees","A powerful model"],
 "OfficeGrid":["Saint Louis","Gurugram","Hyderabad","Pune","Panchkula","Bengaluru","Noida","St. Austin"],
-"AboutusSection":["About Us","Teams","Life@Gemini","Building leaders in the digital domain and beyond","Our services provide clients with a flexibility ","Meet the people who made Gemini possible",["Customer Focus","Agility","Entrepreneurial spirit","Integrity","Team Spirit","Meritocracy"]],
+"AboutusSection":["About Us","Teams","Life@Gemini","Building leaders in the digital domain and beyond","Our services provide clients with a flexibility ","Meet the people who made Gemini possible",["Customer Focus","Agility","Entrepreneurial spirit","Integrity","Team Spirit","Meritocracy"],["Better &amp; Faster Delivery","Transparency &amp; Honesty","Creative Problem Solving","Striving for perfection"]],
 "TeamSection":["Munit Goyal","Sunil Kumar","Pooja Sagar","Vaibhav Khurana","Ankit Saxena","Rohit Goyal","Navtesh Aggarwal","Vishal Malik","Anil Singh","Anil Pahal","Prashank Chaudhary","Neeraj Yadav"],
 "Teamsectionbtns":["Our Case Studies","Search for your dream job"],
 "LifeatGemini":[["Technology Club","CSR Club","Entrepreneurship Club","Gemini on Wheels Club","Cultural Club","Sports Club"]],
@@ -23,6 +23,7 @@
 "GemU Navigation":["About GemU","Campus Connect","Blogs"],
 "Careers Options":["Career","Hiring Process","Perks &amp; Benefits"],
 "Careers Navigation":["Career","Hiring Process","Perks &amp; Benefits"],
-"Contact navigation":["View Our Work"]
+"Contact navigation":["View Our Work"],
+"Search Functionality":["Technologies","No results found"]
 
 }

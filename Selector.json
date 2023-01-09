@@ -31,6 +31,8 @@
 	"Meetusbtn":"<html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /><webctrl innertext='Meet Our Team' />",
 	"Storycontent":"<html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /><webctrl class='bodyText pb-4 ourStory_description__jnlu5' />",
 	"CoreValueGrid":"<html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /><webctrl tag='H2' innertext='Our Core Values' />",
+	"vibes":"<html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /><webctrl aaname='How We Vibe' />",
+	"AboutUsVibes":"<html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /><webctrl class='vibe_Title__mmUYe' aaname='{value}' />",
 	"Teamheading":"<html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /><webctrl class='ourTeamBanner_title__9_mPv' />",
 	"Corevalues":"<html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /><webctrl tag='P' innertext='{value}' />",
 	"MemberHeading":"<html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /><webctrl tag='P' aaname='Members of the Board' />",
@@ -63,8 +65,11 @@
 	"ContactHeading":"<html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /><webctrl tag='P' class='CaseStudy_heading__A9PDh mb-4' />",
 	
 	"SearchIcon":"<html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /><webctrl parentclass='search_icon flex-center' />",
-	"SearchInputbox":"<html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /><webctrl class='global-search-input-container' />"
-
+	"SearchInputbox":"<html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /><webctrl class='global-search-input-container' />",
+	"SearchResult":"<html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /><webctrl class='search-result-count-text' tag='P' />",
+	"ViewBtn":"<html app='chrome.exe' title='https://dev.geminisolutions.com/search?query=Technologies' /><webctrl class='search-content-button' tag='A' aaname='View' idx='{value}' />",
+	"EmptyResult":"<html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /><webctrl tag='P' class='search-result-wrapper-empty' />"
+	
 	
 	
 	
