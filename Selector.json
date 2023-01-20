@@ -70,7 +70,9 @@
 	"ViewBtn":"<html app='chrome.exe' title='https://dev.geminisolutions.com/search?query=Technologies' /><webctrl class='search-content-button' tag='A' aaname='View' idx='{value}' />",
 	"EmptyResult":"<html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /><webctrl tag='P' class='search-result-wrapper-empty' />",
 	"Footer":"<html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /><webctrl aaname='Solutions' class='mb-4 footer_colHeading__06wAw' />",
-	"FooterLinks":"<html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /><webctrl aaname='{value}' class='my-3 footer_links__YwLRw' />"
+	"FooterLinks":"<html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /><webctrl aaname='{value}' class='my-3 footer_links__YwLRw' />",
+	"DataEngineeringContent":"<html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /><webctrl class='react-reveal Content_description__h_a3O' />",
+	"DataEngineeringOptions":"<html app='chrome.exe' title='Gemini Solutions | IT Consulting, Product Development' /><webctrl tag='P' aaname='{Value}' />"
 	
 	
 	

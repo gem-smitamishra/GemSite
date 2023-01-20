@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Search_Functionality" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="2045.333333333333,4180" sap2010:WorkflowViewState.IdRef="Search_Functionality_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:gga="clr-namespace:GemEcosystem.GemSURF.Activities;assembly=GemEcosystem.GemSURF.Activities" xmlns:ggm="clr-namespace:GemEcosystem.GemSURF.Models;assembly=GemEcosystem.GemSURF" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Search_Functionality" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="2045.333333333333,4188.666666666667" sap2010:WorkflowViewState.IdRef="Search_Functionality_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:gga="clr-namespace:GemEcosystem.GemSURF.Activities;assembly=GemEcosystem.GemSURF.Activities" xmlns:ggm="clr-namespace:GemEcosystem.GemSURF.Models;assembly=GemEcosystem.GemSURF" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="45">
       <x:String>System.Activities</x:String>
@@ -111,7 +111,7 @@
       <AssemblyReference>System.Collections</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Search_Functionality" sap:VirtualizedContainerService.HintSize="2055.3333333333335,4115.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Search_Functionality" sap:VirtualizedContainerService.HintSize="2055.3333333333335,4124" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ggm:GlobalConfig" Name="GlobalConf" />
       <Variable x:TypeArguments="ggm:SelectorMap" Name="SelectorMap" />
@@ -124,20 +124,20 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <gga:InitialiseTest ConfigFile="{x:Null}" ContinueOnError="False" DisplayName="Initialise Test" GlobalConfigs="[GlobalConf]" sap:VirtualizedContainerService.HintSize="1993.3333333333333,134.66666666666666" sap2010:WorkflowViewState.IdRef="InitialiseTest_1" SelectorMap="[SelectorMap]" TestCaseName="Search Functionality" TestData="[TestData]" />
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Gemini Solutions | IT Consulting, Product Development" sap:VirtualizedContainerService.HintSize="1993.3333333333333,3703.3333333333335" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OutUiElement="[UiBrowser]" ScopeGuid="d6d439f7-aca1-49b8-95cf-fcf667bbc970" Version="V2">
+    <gga:InitialiseTest ConfigFile="{x:Null}" ContinueOnError="False" DisplayName="Initialise Test" GlobalConfigs="[GlobalConf]" sap:VirtualizedContainerService.HintSize="1993.3333333333333,136" sap2010:WorkflowViewState.IdRef="InitialiseTest_1" SelectorMap="[SelectorMap]" TestCaseName="Search Functionality" TestData="[TestData]" />
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: Gemini Solutions | IT Consulting, Product Development" sap:VirtualizedContainerService.HintSize="1993.3333333333333,3710.6666666666665" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OutUiElement="[UiBrowser]" ScopeGuid="d6d439f7-aca1-49b8-95cf-fcf667bbc970" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1959.3333333333333,3484.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1959.3333333333333,3491.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Assign sap:VirtualizedContainerService.HintSize="1897.3333333333333,84.66666666666667" sap2010:WorkflowViewState.IdRef="Assign_1">
+            <Assign sap:VirtualizedContainerService.HintSize="1897.3333333333333,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_1">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[Flag]</OutArgument>
               </Assign.To>
@@ -145,12 +145,12 @@
                 <InArgument x:TypeArguments="x:String">true</InArgument>
               </Assign.Value>
             </Assign>
-            <uix:NClick ClickType="Single" DisplayName="Click" sap:VirtualizedContainerService.HintSize="1897.3333333333333,158.66666666666666" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d6d439f7-aca1-49b8-95cf-fcf667bbc970" Version="V3">
+            <uix:NClick ClickType="Single" DisplayName="Click" sap:VirtualizedContainerService.HintSize="1897.3333333333333,159.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d6d439f7-aca1-49b8-95cf-fcf667bbc970" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" FullSelectorArgument="[SelectorMap(&quot;SearchIcon&quot;).ToString]" Guid="47d3bf6d-bfbf-4502-a926-a565430468b1" SearchSteps="Selector" />
               </uix:NClick.Target>
             </uix:NClick>
-            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="TextType.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="1897.3333333333333,114.66666666666667" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Resuable Code\TextType.xaml">
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="TextType.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="1897.3333333333333,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Resuable Code\TextType.xaml">
               <ui:InvokeWorkflowFile.Arguments>
                 <InArgument x:TypeArguments="x:String" x:Key="Selector">
                   <VisualBasicValue x:TypeArguments="x:String" ExpressionText="SelectorMap(&quot;SearchInputbox&quot;).ToString" />
@@ -163,9 +163,9 @@
                 </InArgument>
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
-            <uix:NCheckState DisplayName="Check App State" sap:VirtualizedContainerService.HintSize="1897.3333333333333,2076" sap2010:WorkflowViewState.IdRef="NCheckState_1" Timeout="5" Version="V3">
+            <uix:NCheckState DisplayName="Check App State" sap:VirtualizedContainerService.HintSize="1897.3333333333333,2080.6666666666665" sap2010:WorkflowViewState.IdRef="NCheckState_1" Timeout="5" Version="V3">
               <uix:NCheckState.IfExists>
-                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="1206.6666666666667,1856" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="1206.6666666666667,1859.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="x:String" Name="Result" />
                     <Variable x:TypeArguments="s:String[]" Name="Text" />
@@ -179,12 +179,12 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uix:NGetText DisplayName="Get Text" sap:VirtualizedContainerService.HintSize="1144.6666666666667,158.66666666666666" sap2010:WorkflowViewState.IdRef="NGetText_1" TextString="[Result]" Version="V3">
+                  <uix:NGetText DisplayName="Get Text" sap:VirtualizedContainerService.HintSize="1144.6666666666667,159.33333333333334" sap2010:WorkflowViewState.IdRef="NGetText_1" TextString="[Result]" Version="V3">
                     <uix:NGetText.Target>
                       <uix:TargetAnchorable DesignTimeRectangle="0, 0, 0, 0" FullSelectorArgument="[SelectorMap(&quot;SearchResult&quot;).ToString]" Guid="95a3f25a-32e0-4575-a34d-58ad587d975b" SearchSteps="Selector" />
                     </uix:NGetText.Target>
                   </uix:NGetText>
-                  <Assign sap:VirtualizedContainerService.HintSize="1144.6666666666667,84.66666666666667" sap2010:WorkflowViewState.IdRef="Assign_2">
+                  <Assign sap:VirtualizedContainerService.HintSize="1144.6666666666667,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_2">
                     <Assign.To>
                       <OutArgument x:TypeArguments="s:String[]">[Text]</OutArgument>
                     </Assign.To>
@@ -192,19 +192,19 @@
                       <InArgument x:TypeArguments="s:String[]">[Result.Split(" ")]</InArgument>
                     </Assign.Value>
                   </Assign>
-                  <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="1144.6666666666667,394" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[Text.ToArray]">
+                  <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="1144.6666666666667,395.3333333333333" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[Text.ToArray]">
                     <ui:ForEach.Body>
                       <ActivityAction x:TypeArguments="x:Object">
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="x:Object" Name="currentItem" />
                         </ActivityAction.Argument>
-                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,266" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,266.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_5">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <Assign sap:VirtualizedContainerService.HintSize="434,84.66666666666667" sap2010:WorkflowViewState.IdRef="Assign_3">
+                          <Assign sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_3">
                             <Assign.To>
                               <OutArgument x:TypeArguments="x:String">[Resultcount]</OutArgument>
                             </Assign.To>
@@ -217,7 +217,7 @@
                       </ActivityAction>
                     </ui:ForEach.Body>
                   </ui:ForEach>
-                  <Assign sap:VirtualizedContainerService.HintSize="1144.6666666666667,84.66666666666667" sap2010:WorkflowViewState.IdRef="Assign_4">
+                  <Assign sap:VirtualizedContainerService.HintSize="1144.6666666666667,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_4">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:Int32">[Length]</OutArgument>
                     </Assign.To>
