@@ -1,5 +1,6 @@
 {
   "name": "GemSite",
+  "projectId": "153b04e2-5aee-4c70-a653-dec6ba7eecc9",
   "description": "Blank Process",
   "main": "Main.xaml",
   "dependencies": {
@@ -22,6 +23,7 @@
     "isAttended": false,
     "requiresUserInteraction": true,
     "supportsPersistence": false,
+    "workflowSerialization": "DataContract",
     "excludedLoggedData": [
       "Private:*",
       "*password*"
